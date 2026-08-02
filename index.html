@@ -73,7 +73,7 @@ nav {
 }
 
 .nav-center {
-  display: flex; gap: 2.3rem;
+  display: flex; gap: 1.9rem;
   position: absolute; left: 50%; transform: translateX(-50%);
 }
 .nav-center a {
@@ -404,6 +404,105 @@ section { padding: 8rem 3.5rem; }
   .sp { width: 28px; height: 190px; }
   .sp.f { width: 38px; height: 208px; }
   .sp .t { font-size: 9px; }
+}
+
+/* PORTAL — 학생 · 학부모 관리 시스템 */
+.portal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.portal-card {
+  border: 1px solid var(--rule);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.portal-head {
+  background: var(--navy);
+  color: var(--paper);
+  padding: 2.6rem 2.2rem 2.2rem;
+  text-align: center;
+}
+.portal-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold3);
+  margin-bottom: 1rem;
+}
+.portal-head h3 {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 1.42rem;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+}
+.portal-head h3 em {
+  font-style: normal;
+  color: var(--gold3);
+}
+.portal-head p {
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(250,248,245,0.62);
+}
+.portal-url {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.62rem 1.5rem;
+  border: 1px solid rgba(232,201,126,0.42);
+  border-radius: 999px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--paper);
+  text-decoration: none;
+  transition: background 0.22s, border-color 0.22s, color 0.22s;
+}
+.portal-url:hover {
+  background: var(--gold3);
+  border-color: var(--gold3);
+  color: var(--navy);
+}
+.portal-body { padding: 0.6rem 2.2rem 2.4rem; flex: 1; }
+.portal-item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule2); }
+.portal-item:last-child { border-bottom: none; }
+.portal-item b {
+  display: block;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 0.45rem;
+}
+.portal-item span {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.portal-note {
+  margin-top: 3rem;
+  padding: 1.6rem 2rem;
+  border-left: 2px solid var(--gold2);
+  background: var(--cream);
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--ink2);
+}
+@media (max-width: 900px) {
+  .portal-grid { grid-template-columns: 1fr; gap: 1.6rem; margin-top: 2.5rem; }
+}
+@media (max-width: 560px) {
+  .portal-head { padding: 2.2rem 1.5rem 1.9rem; }
+  .portal-head h3 { font-size: 1.24rem; }
+  .portal-body { padding: 0.4rem 1.5rem 2rem; }
+  .portal-note { padding: 1.3rem 1.4rem; font-size: 0.95rem; }
 }
 
 /* TEXTBOOKS — PAPILIO & FOCUS */
@@ -841,6 +940,7 @@ footer p {
   <div class="nav-center">
     <a href="#curriculum">Curriculum</a>
     <a href="#books">Textbooks</a>
+    <a href="#portal">Portal</a>
     <a href="#strategy">Strategy</a>
     <a href="#philosophy">Philosophy</a>
     <a href="#contact">Contact</a>
@@ -1054,6 +1154,60 @@ footer p {
 
     <div class="bk-foot reveal">
       교재는 커리큘럼의 그림자입니다.<br>다섯 단계가 지면 위에 그대로 놓여 있습니다.
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTAL -->
+<section id="portal" style="background: var(--paper);">
+  <div class="section-inner">
+
+    <div class="section-header reveal">
+      <div>
+        <div class="section-tag">Management</div>
+        <h2 class="section-title">MY JINIUS-LAB<br><em>학생 · 학부모 관리 시스템</em></h2>
+      </div>
+      <p class="section-sub">수업이 끝난 뒤에도 기록은 남습니다. 학생에겐 공부의 도구를, 학부모님께는 투명한 창을 드립니다.</p>
+    </div>
+
+    <div class="portal-grid reveal">
+      <div class="portal-card">
+        <div class="portal-head">
+          <div class="portal-tag">For Students</div>
+          <h3>공부의 모든 것,<br><em>내 폰 안의 지니어스랩</em></h3>
+          <p>플래너 · 인강 관리 · 과제 · 시간표를 앱 하나로</p>
+          <a class="portal-url" href="https://my.jinius-lab.kr/student" target="_blank" rel="noopener">my.jinius-lab.kr/student</a>
+        </div>
+        <div class="portal-body">
+        <div class="portal-item"><b>목표 대학이 매일 보이는 홈</b><span>내가 정한 대학·학과와 로고, 수능 디데이가 로그인할 때마다 반겨줍니다.</span></div>
+        <div class="portal-item"><b>나만의 스터디 플래너</b><span>시간을 색칠하며 하루를 계획하고, 공부 인증 사진을 올리면 선생님이 직접 확인합니다.</span></div>
+        <div class="portal-item"><b>인강 완강 관리</b><span>강좌별 진도바가 차오르고, 점검테스트 점수까지 한눈에 보입니다.</span></div>
+        <div class="portal-item"><b>과제 · 시간표 · 달력</b><span>이번 주 과제와 출결, 학사일정을 놓치지 않게. 시험 기간도 미리미리.</span></div>
+        <div class="portal-item"><b>선생님과 다이렉트 메시지</b><span>궁금한 건 바로 질문. 원장·선생님을 지정해서 보낼 수 있습니다.</span></div>
+        </div>
+      </div>
+
+      <div class="portal-card">
+        <div class="portal-head">
+          <div class="portal-tag">For Parents</div>
+          <h3>우리 아이의 오늘이<br><em>투명하게 보입니다</em></h3>
+          <p>출결 · 수업일지 · 성적을 언제든, 한 화면에서</p>
+          <a class="portal-url" href="https://my.jinius-lab.kr/parent" target="_blank" rel="noopener">my.jinius-lab.kr/parent</a>
+        </div>
+        <div class="portal-body">
+        <div class="portal-item"><b>회차별 수업일지</b><span>오늘 무엇을 배웠고 어떤 피드백을 받았는지, 수업마다 기록으로 전해드립니다. 댓글로 소통도 가능합니다.</span></div>
+        <div class="portal-item"><b>출결 달력</b><span>출석·지각·결석·보강이 달력에 표시되고, 날짜를 누르면 그날의 수업일지가 바로 열립니다.</span></div>
+        <div class="portal-item"><b>인강 진도까지 투명하게</b><span>강좌별 완강률과 점검테스트 점수를 그대로 보여드립니다. "듣고 있어요"가 아니라 숫자로 확인하세요.</span></div>
+        <div class="portal-item"><b>성적 추이</b><span>시험 결과가 기록되어 변화를 한눈에 보실 수 있습니다.</span></div>
+        <div class="portal-item"><b>원장 직접 메시지</b><span>중요한 안내는 원장이 직접 보내드리고, 확인 여부까지 관리합니다.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="portal-note reveal">
+      아이의 학습을 "믿고 맡기는 것"에서 "함께 지켜보는 것"으로 — JINIUS-LAB의 약속입니다.<br>
+      접속 후 <strong>공유 버튼 → 홈 화면에 추가</strong> 하시면 앱처럼 사용하실 수 있습니다.
     </div>
 
   </div>
