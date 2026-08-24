@@ -638,20 +638,68 @@ section { padding: 8rem 3.5rem; }
   color: var(--navy);
 }
 .portal-body { padding: 0.6rem 2.2rem 2.4rem; flex: 1; }
-.portal-item { padding: 1.5rem 0; border-bottom: 1px solid var(--rule2); }
+.portal-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 0.9rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--rule2);
+}
 .portal-item:last-child { border-bottom: none; }
+.portal-item i {
+  font-family: 'DM Mono', monospace;
+  font-style: normal;
+  font-size: 0.72rem;
+  color: var(--gold);
+  padding-top: 0.24rem;
+}
 .portal-item b {
   display: block;
   font-family: 'Noto Serif KR', serif;
   font-weight: 600;
   font-size: 1rem;
   color: var(--navy);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.35rem;
 }
 .portal-item span {
   display: block;
   font-size: 0.9rem;
-  line-height: 1.8;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.portal-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+.portal-quad div {
+  border: 1px solid rgba(232,201,126,0.26);
+  padding: 0.85rem 0.95rem;
+  text-align: left;
+}
+.portal-quad em {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-style: normal;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  color: var(--gold3);
+  margin-bottom: 0.35rem;
+}
+.portal-quad span {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: rgba(250,248,245,0.82);
+}
+.portal-tip {
+  margin-top: 1.4rem;
+  padding: 1.3rem 1.5rem;
+  background: var(--cream);
+  border-left: 2px solid var(--gold2);
+  font-size: 0.88rem;
+  line-height: 1.85;
   color: var(--muted);
 }
 .portal-note {
@@ -671,6 +719,13 @@ section { padding: 8rem 3.5rem; }
   .portal-head h3 { font-size: 1.24rem; }
   .portal-body { padding: 0.4rem 1.5rem 2rem; }
   .portal-note { padding: 1.3rem 1.4rem; font-size: 0.95rem; }
+  .portal-item { grid-template-columns: 26px 1fr; gap: 0.7rem; padding: 1rem 0; }
+  .portal-item b { font-size: 0.96rem; }
+  .portal-item span { font-size: 0.86rem; }
+  .portal-quad { grid-template-columns: 1fr 1fr; gap: 0.45rem; }
+  .portal-quad div { padding: 0.7rem 0.75rem; }
+  .portal-quad span { font-size: 0.76rem; }
+  .portal-tip { padding: 1.1rem 1.2rem; font-size: 0.85rem; }
 }
 
 /* TEXTBOOKS — PAPILIO & FOCUS */
@@ -1434,43 +1489,63 @@ footer p {
       <div class="portal-card">
         <div class="portal-head">
           <div class="portal-tag">For Students</div>
-          <h3>공부의 모든 것,<br><em>내 폰 안의 지니어스랩</em></h3>
-          <p>과제 · 시험 리포트 · 플래너 · 시간표를 앱 하나로</p>
+          <h3>오늘 무엇을 해야 하는지<br><em>앱을 열면 나와 있습니다</em></h3>
+          <p>플래너 · 로드맵 · 과제 · 시간표 · 성적이 한 곳에. 선생님이 짜 준 계획을 따라가고, 다 하면 체크만 누르면 됩니다.</p>
+          <div class="portal-quad">
+            <div><em>01</em><span>오늘 할 일을 확인합니다</span></div>
+            <div><em>02</em><span>하고 나서 체크합니다</span></div>
+            <div><em>03</em><span>막히면 바로 물어봅니다</span></div>
+            <div><em>04</em><span>성적으로 확인합니다</span></div>
+          </div>
           <a class="portal-url" href="https://my.jinius-lab.kr/student" target="_blank" rel="noopener">my.jinius-lab.kr/student</a>
         </div>
         <div class="portal-body">
-        <div class="portal-item"><b>과제 — 찍어서 바로 제출</b><span>선생님이 과제를 올리면 알림과 함께 바로 떠요. 사진을 찍거나 파일을 여러 장 올려 제출하면, 선생님 확인 후 «확인 완료»로 바뀝니다.</span></div>
-        <div class="portal-item"><b>내 시험 리포트</b><span>회차별 점수 추이 그래프, 영역별 강점·약점, 반 평균 대비 내 위치까지. 내가 어디쯤 와 있는지 숫자로 보여요.</span></div>
-        <div class="portal-item"><b>내 수업만 보이는 주간 시간표</b><span>이번 주 내가 들어야 할 수업만 날짜와 함께. 다음 주 시간표도 미리 볼 수 있어요.</span></div>
-        <div class="portal-item"><b>출석 체크는 한 번의 터치</b><span>학원에 도착해서 버튼만 누르면 끝. 내 등원 시각이 요일마다 표시되고, 언제 눌렀는지도 남습니다.</span></div>
-        <div class="portal-item"><b>목표 대학이 매일 보이는 홈</b><span>내가 정한 대학·학과와 로고, 그리고 수능 디데이가 로그인할 때마다 반겨줘요.</span></div>
-        <div class="portal-item"><b>나만의 스터디 플래너</b><span>시간을 색칠하며 하루를 계획하고, 공부 인증 사진도 올려요. 선생님이 직접 확인!</span></div>
-        <div class="portal-item"><b>인강 완강 관리</b><span>강좌별 진도바가 차오르는 재미. +1강 누르면 완강률이 올라가고, 잘못 눌렀으면 되돌리기도 돼요.</span></div>
-        <div class="portal-item"><b>자료실 · 공지 · 메시지</b><span>프린트와 해설지를 게시글에서 한 번에 받고, 궁금한 건 원장·선생님을 지정해 바로 질문하세요.</span></div>
-      </div>
+          <div class="portal-item"><i>01</i><div><b>내 플래너</b><span>내 과목 · 내 과제로 짜인 나만의 플래너</span></div></div>
+          <div class="portal-item"><i>02</i><div><b>로드맵</b><span>교재를 어디까지 나갔는지, 다 하면 체크 신청</span></div></div>
+          <div class="portal-item"><i>03</i><div><b>질문 은행</b><span>모르는 문제를 교재에서 골라 물어보면 답 대신 힌트가 차례로 열립니다</span></div></div>
+          <div class="portal-item"><i>04</i><div><b>달리기</b><span>친구들과 나란히 달리고 캐릭터도 고를 수 있어요</span></div></div>
+          <div class="portal-item"><i>05</i><div><b>과제함</b><span>받은 과제를 여기서 바로 제출합니다</span></div></div>
+          <div class="portal-item"><i>06</i><div><b>이번 주 목표</b><span>이번 주에 무엇을 해야 하는지 한눈에</span></div></div>
+          <div class="portal-item"><i>07</i><div><b>시간표</b><span>이번 주 내 수업이 언제인지 확인합니다</span></div></div>
+          <div class="portal-item"><i>08</i><div><b>성적 리포트</b><span>시험 점수와 등급 변화를 그래프로 봅니다</span></div></div>
+          <div class="portal-item"><i>09</i><div><b>메시지</b><span>선생님께 궁금한 것을 바로 물어봅니다</span></div></div>
+          <div class="portal-item"><i>10</i><div><b>꾸미기</b><span>목표 대학과 배경색을 내 마음대로</span></div></div>
+          <div class="portal-tip">친구들에게는 <strong>내 캐릭터와 닉네임</strong>으로만 보입니다. 실명은 원장만 봅니다.<br>홈 화면에 추가해 두면 새 소식 개수가 아이콘에 숫자로 표시됩니다.</div>
+        </div>
       </div>
 
       <div class="portal-card">
         <div class="portal-head">
           <div class="portal-tag">For Parents</div>
-          <h3>우리 아이의 오늘이<br><em>투명하게 보입니다</em></h3>
-          <p>출결 · 과제 · 수업일지 · 성적을 언제든, 한 화면에서</p>
+          <h3>학원에서 무엇을 했는지<br><em>집에서 그대로 보입니다</em></h3>
+          <p>출결과 그날 수업, 과제, 진도, 성적, 수납까지 한 곳에 정리됩니다. 따로 여쭤보지 않으셔도 됩니다.</p>
+          <div class="portal-quad">
+            <div><em>01</em><span>오늘 왔는지 — 출결</span></div>
+            <div><em>02</em><span>무엇을 했는지 — 수업일지</span></div>
+            <div><em>03</em><span>얼마나 나갔는지 — 과제 · 진도</span></div>
+            <div><em>04</em><span>얼마나 늘었는지 — 성적 리포트</span></div>
+          </div>
           <a class="portal-url" href="https://my.jinius-lab.kr/parent" target="_blank" rel="noopener">my.jinius-lab.kr/parent</a>
         </div>
         <div class="portal-body">
-        <div class="portal-item"><b>과제, 냈는지 안 냈는지</b><span>마감일이 달력에 표시되고 «제출완료 / 확인중 / 늦게 제출 / 미제출»이 그대로 보입니다. 선생님이 확인해야 완료로 바뀝니다.</span></div>
-        <div class="portal-item"><b>출결 — 몇 시에 왔는지까지</b><span>출석·지각·결석이 달력에 기록되고, 지각이면 몇 분 늦었는지도 남습니다. 날짜를 누르면 그날 기록이 한눈에.</span></div>
-        <div class="portal-item"><b>회차별 수업일지</b><span>오늘 무엇을 배웠고 어떤 피드백을 받았는지 수업마다 기록으로 전해드립니다. 댓글로 선생님과 소통도 가능해요.</span></div>
-        <div class="portal-item"><b>성적 추이와 강약점</b><span>회차별 점수 그래프, 영역별 강점·약점, 반 평균 대비 위치, 그리고 원장의 분석 코멘트까지 함께 드립니다.</span></div>
-        <div class="portal-item"><b>인강 진도까지 투명하게</b><span>강좌별 완강률과 점검테스트 점수를 그대로 보여드립니다. "인강 듣고 있어요"가 아니라 숫자로 확인하세요.</span></div>
-        <div class="portal-item"><b>원장 직접 메시지</b><span>중요한 안내는 원장이 직접 보내드리고, 확인 여부까지 관리합니다.</span></div>
-      </div>
+          <div class="portal-item"><i>01</i><div><b>출결 · 학원 일정</b><span>등원과 결석, 학원 일정을 달력에서 확인합니다</span></div></div>
+          <div class="portal-item"><i>02</i><div><b>학원 시간표</b><span>이번 주 수업이 언제인지 한눈에 봅니다</span></div></div>
+          <div class="portal-item"><i>03</i><div><b>이번 주 목표</b><span>이번 주에 무엇을 하기로 했는지 확인하고 「확인했어요」를 누릅니다</span></div></div>
+          <div class="portal-item"><i>04</i><div><b>수업일지</b><span>그날 무엇을 했는지 수업마다 기록됩니다</span></div></div>
+          <div class="portal-item"><i>05</i><div><b>과제함</b><span>낸 과제와 안 낸 과제가 그대로 보입니다</span></div></div>
+          <div class="portal-item"><i>06</i><div><b>학습 진도</b><span>교재를 어디까지 나갔는지 진도율로 확인합니다</span></div></div>
+          <div class="portal-item"><i>07</i><div><b>최근 성적</b><span>최근 시험 점수와 등급 변화를 봅니다</span></div></div>
+          <div class="portal-item"><i>08</i><div><b>인강 진도</b><span>듣기로 한 인강을 어디까지 들었는지</span></div></div>
+          <div class="portal-item"><i>09</i><div><b>수납 안내</b><span>이번 달 수납 내역과 납부일을 안내받습니다</span></div></div>
+          <div class="portal-item"><i>10</i><div><b>원장과의 대화</b><span>궁금한 것을 남기면 원장이 직접 답합니다</span></div></div>
+          <div class="portal-tip">자녀가 <strong>둘 이상</strong>이면 위쪽 이름 단추로 바꿔 가며 봅니다.<br>새 공지와 수업일지가 올라오면 알림으로 알려 드립니다.</div>
+        </div>
       </div>
     </div>
 
     <div class="portal-note reveal">
-      아이의 학습을 "믿고 맡기는 것"에서 "함께 지켜보는 것"으로 — JINIUS-LAB의 약속입니다.<br>
-      접속 후 <strong>공유 버튼 → 홈 화면에 추가</strong> 하시면 앱처럼 사용하실 수 있습니다.
+      휴대폰 브라우저에서 위 주소를 열고 <strong>「홈 화면에 추가」</strong>를 누르면 앱처럼 사용하실 수 있습니다.<br>
+      앱은 알아서 최신으로 바뀌니 다시 설치할 필요가 없습니다.
     </div>
 
   </div>
