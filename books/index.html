@@ -34,6 +34,8 @@ a { color: inherit; text-decoration: none; }
 .brand b { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: 0.08em; color: var(--navy); }
 .top-links { display: flex; align-items: center; gap: 1.6rem; font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .top-links a:hover { color: var(--ink); }
+.top-links .tab { font-family: 'Noto Serif KR', serif; font-size: 0.92rem; font-weight: 500; letter-spacing: 0.04em; text-transform: none; white-space: nowrap; }
+.top-links .tab.on { color: var(--navy); font-weight: 700; }
 .top-links .cta { color: var(--navy); border: 1px solid var(--navy); padding: 0.5rem 1.1rem; }
 .top-links .cta:hover { background: var(--navy); color: var(--paper); }
 
@@ -156,7 +158,11 @@ footer a:hover { color: var(--navy); }
 @media (max-width: 860px) {
   .top { padding: 0.8rem 1.2rem; }
   .top-links { gap: 0.9rem; font-size: 0.7rem; }
-  .top-links .hide-s { display: none; }
+  .top { flex-wrap: wrap; row-gap: 0.5rem; }
+  .top-links { width: 100%; order: 3; gap: 1.2rem; overflow-x: auto; scrollbar-width: none; }
+  .top-links::-webkit-scrollbar { display: none; }
+  .top-links .tab { font-size: 0.86rem; }
+  .top-links .cta { display: none; }
   .hero { padding: 4rem 1.5rem 3.2rem; }
   .series, .buy { padding: 3.6rem 1.5rem; }
   .s-head { flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -199,11 +205,12 @@ footer a:hover { color: var(--navy); }
     <b>JL·NAHBI</b>
   </a>
   <nav class="top-links">
-    <a class="hide-s" href="/">Home</a>
-    <a class="hide-s" href="/#curriculum">Curriculum</a>
-    <a class="hide-s" href="/books/" style="color:var(--navy)">Textbooks</a>
-    <a class="hide-s" href="/#method">Method</a>
-    <a class="hide-s" href="/#portal">Portal</a>
+    <a class="tab" href="/#top">소개</a>
+    <a class="tab" href="/#curriculum">커리큘럼</a>
+    <a class="tab on" href="/books/">책들</a>
+    <a class="tab" href="/#method">수업 · 관리</a>
+    <a class="tab" href="/#philosophy">교육 철학</a>
+    <a class="tab" href="/#contact">오시는 길</a>
     <a class="cta" href="/#contact">상담 예약</a>
   </nav>
 </header>
