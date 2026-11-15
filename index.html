@@ -1324,6 +1324,10 @@ footer p {
 .live-note b { font-size: 1.12rem; font-weight: 700; color: var(--navy); }
 .live-note b small { margin-left: 0.5rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; color: var(--gold); border: 1px solid var(--gold2); border-radius: 999px; padding: 0.12rem 0.6rem; vertical-align: middle; white-space: nowrap; }
 .live-note p { margin-top: 0.35rem; font-size: 0.98rem; line-height: 1.8; color: var(--muted); word-break: keep-all; }
+.stat { padding: 1.9rem 1.5rem 1.8rem; text-align: center; }
+.stat-num { font-size: 3.3rem; font-variant-numeric: lining-nums; margin-bottom: 0.45rem; }
+.stat-num sup { font-size: 1.05rem; }
+.stat-label { font-size: 0.78rem; }
 /* 모집 띠 */
 .bn { display: none; }
 body.has-bn { --bn-h: 40px; padding-top: var(--bn-h); }
@@ -1338,6 +1342,9 @@ body.has-bn nav { top: var(--bn-h); }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   body.has-bn { --bn-h: 36px; }
+  .stat { padding: 1.3rem 0.8rem 1.25rem; }
+  .stat-num { font-size: 2.5rem; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 0.1em; }
   .bn a { font-size: 0.82rem; }
   .bn a i { margin-left: 0.7rem; }
   .bn-d { display: none; }
