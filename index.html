@@ -138,7 +138,8 @@ nav {
 .subj-title { font-size: clamp(2.2rem, 3.8vw, 3.6rem); word-break: keep-all; }
 .subj-list { border-top: 1px solid var(--rule); background: #fff; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); }
 .subj-row { display: grid; grid-template-columns: 3.2rem 13rem 1fr; align-items: center; gap: 0 1.2rem; padding: 1.15rem 1.6rem; border-bottom: 1px solid var(--rule); }
-.subj-row i { font-family: 'DM Mono', monospace; font-style: normal; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--gold); }
+.subj-row i { font-style: normal; color: var(--gold); display: flex; align-items: center; }
+.subj-row i svg { width: 30px; height: 30px; display: block; }
 .subj-row b { font-size: 1.08rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
 .subj-row b small { display: block; font-size: 0.74rem; font-weight: 500; color: var(--muted); margin-top: 0.15rem; }
 .subj-row span { font-size: 0.97rem; color: var(--ink2); line-height: 1.75; word-break: keep-all; }
@@ -815,7 +816,9 @@ section { padding: 8rem 3.5rem; }
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#books .section-sub { color: rgba(237,230,211,0.72); }
+#books .section-sub { color: rgba(237,230,211,0.72); max-width: 34rem; }
+#books .section-sub .nb { white-space: nowrap; }
+@media (max-width: 520px) { #books .section-sub .nb { white-space: normal; } }
 
 .bk-shelfwrap { margin-top: 4rem; }
 .bk-label { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.4rem; }
@@ -1321,16 +1324,16 @@ footer p {
       <p class="section-sub">수학에서 시작해 국어 · 영어 · 과학, 논술과 입시 설계까지 한 곳에서 이어집니다.</p>
     </div>
     <div class="subj-list reveal">
-      <div class="subj-row"><i>01</i><b>국어 · 논리</b><span>내신 대비 · 수능 대비 · 사고력</span></div>
-      <div class="subj-row"><i>02</i><b>영어</b><span>내신영어 · 수능영어</span></div>
-      <div class="subj-row"><i>03</i><b>수학</b><span>내신수학 (자사고 및 내신 세부과목)<br>수능수학 (대수 · 미적분Ⅰ · 확통)</span></div>
-      <div class="subj-row"><i>04</i><b>과학</b><span>내신과학 (통과 · 물화생지 및 내신 세부과목)<br>수능과학 (통합과학)</span></div>
-      <div class="subj-row"><i>05</i><b>KMO · 영재</b><span>KMO · 영재고 · 과학고 대비<br>수학적 사고력 심화 (초등부 등록 가능)</span></div>
-      <div class="subj-row"><i>06</i><b>논술</b><span>인문논술 · 수리논술 · 약술논술</span></div>
-      <div class="subj-row"><i>07</i><b>편입</b><span>편입영어 · 편입수학</span></div>
-      <div class="subj-row"><i>08</i><b>검정고시</b><span>중 · 고등 전과목 (후에 입시 연결 가능)</span></div>
-      <div class="subj-row"><i>09</i><b>AP / IB / SAT</b><span>Calculus AB, BC, Geometry, Algebra<br>Biology, Chemistry, Physics 가능</span></div>
-      <div class="subj-row"><i>10</i><b>입시컨설팅<small>자격증 1, 2급 보유</small></b><span>생기부 · 수행평가 · 수시 관리 · 정시 점수 관리 및<br>전반적 맞춤형 입시 로드맵 설계</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6.2C10.2 4.9 7.6 4.4 3.5 4.6v13.2c4.1-.2 6.7.3 8.5 1.6 1.8-1.3 4.4-1.8 8.5-1.6V4.6c-4.1-.2-6.7.3-8.5 1.6z"/><path d="M12 6.2v13.2"/><path d="M6 8.6h3.4M6 11.4h3.4M14.6 8.6H18M14.6 11.4H18"/></svg></i><b>국어 · 논리</b><span>내신 대비 · 수능 대비 · 사고력</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><text x="12" y="16.6" text-anchor="middle" font-family="DM Mono, monospace" font-size="11.5" font-weight="500" fill="currentColor" stroke="none" letter-spacing="0.5">EN</text></svg></i><b>영어</b><span>내신영어 · 수능영어</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><text x="12" y="16.4" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-style="italic" font-size="13.5" font-weight="600" fill="currentColor" stroke="none">f(x)</text></svg></i><b>수학</b><span>내신수학 (자사고 및 내신 세부과목)<br>수능수학 (대수 · 미적분Ⅰ · 확통)</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 3.5h5M10.5 3.5v6L5.2 18.3a1.5 1.5 0 0 0 1.3 2.2h11a1.5 1.5 0 0 0 1.3-2.2L13.5 9.5v-6"/><path d="M7.8 14.5h8.4"/></svg></i><b>과학</b><span>내신과학 (통과 · 물화생지 및 내신 세부과목)<br>수능과학 (통합과학)</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></i><b>KMO · 영재</b><span>KMO · 영재고 · 과학고 대비<br>수학적 사고력 심화 (초등부 등록 가능)</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 4.5l4 4L8.8 19.2l-4.8 1 1-4.8z"/><path d="M13.4 6.6l4 4"/><path d="M13 20.5h7"/></svg></i><b>논술</b><span>인문논술 · 수리논술 · 약술논술</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5L2.5 9.5 12 14l9.500-4.500z"/><path d="M6.5 11.600v4.200c0 1.400 2.500 2.700 5.500 2.700s5.500-1.300 5.500-2.700v-4.200"/><path d="M21.500 9.500v5"/></svg></i><b>편입</b><span>편입영어 · 편입수학</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.500" y="5" width="17" height="15.500" rx="2"/><path d="M3.500 9.500h17M8 3.200v3.400M16 3.200v3.400"/><path d="M8.600 14.600l2.400 2.400 4.400-4.600"/></svg></i><b>검정고시</b><span>중 · 고등 전과목 (후에 입시 연결 가능)</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.600 2.500 3.900 5.500 3.900 9s-1.300 6.500-3.900 9c-2.600-2.500-3.900-5.500-3.900-9S9.400 5.500 12 3z"/></svg></i><b>AP / IB / SAT</b><span>Calculus AB, BC, Geometry, Algebra<br>Biology, Chemistry, Physics 가능</span></div>
+      <div class="subj-row"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.500 20.500h17M5 20.500v-9M19 20.500v-9M8.500 20.500v-7.500a3.500 3.500 0 0 1 7 0v7.500"/><path d="M3.500 11.500h17"/><path d="M5 11.500a7 7 0 0 1 14 0"/></svg></i><b>입시컨설팅<small>자격증 1, 2급 보유</small></b><span>생기부 · 수행평가 · 수시 관리 · 정시 점수 관리 및<br>전반적 맞춤형 입시 로드맵 설계</span></div>
     </div>
   </div>
 </section>
@@ -1404,7 +1407,7 @@ footer p {
         <div class="section-tag">Textbooks</div>
         <h2 class="section-title">PAPILIO &amp; FOCUS<br><em>자체 제작 교재</em></h2>
       </div>
-      <p class="section-sub">일곱 과목 다섯 단계, 그리고 네 권의 특강 — 커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 교재.</p>
+      <p class="section-sub">일곱 과목 다섯 단계, 그리고 네 권의 특강<br><span class="nb">커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 교재.</span></p>
     </div>
 
     <div class="bk-shelfwrap reveal">
