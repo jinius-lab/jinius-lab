@@ -154,10 +154,10 @@ body {
       <span>전화 상담</span><i>010.6556.6530</i>
     </a>
 
-    <a class="btn gold" href="https://pf.kakao.com/" target="_blank" rel="noopener">
+    <button class="btn gold" id="kakao" type="button">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.6c-4.9 0-8.8 3.1-8.8 7 0 2.5 1.7 4.7 4.2 5.9l-1 3.7 4.1-2.4c.5.1 1 .1 1.5.1 4.9 0 8.8-3.1 8.8-7s-3.9-7.3-8.8-7.3z"/></svg>
-      <span>카카오톡 상담</span>
-    </a>
+      <span style="text-align:left">카카오톡 상담</span><i>ID jlnahbi · 눌러서 복사</i>
+    </button>
 
   </div>
 
@@ -183,6 +183,10 @@ body {
         <span>쓰레드</span>
       </a>
     </div>
+    <a class="btn" href="https://youtube.com/@jlnahbi" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="5.2" width="19.2" height="13.6" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z"/></svg>
+      <span>유튜브</span><i>@jlnahbi</i>
+    </a>
   </div>
 
   <div class="label">학생 · 학부모</div>
@@ -211,6 +215,18 @@ body {
 <div class="toast" id="toast">링크가 복사되었습니다</div>
 
 <script>
+document.getElementById('kakao').addEventListener('click', function () {
+  var id = 'jlnahbi';
+  var t = document.getElementById('toast'); var old = t.textContent;
+  var show = function () {
+    t.textContent = '카카오톡 ID가 복사되었습니다 : ' + id;
+    t.classList.add('on');
+    setTimeout(function () { t.classList.remove('on'); t.textContent = old; }, 2200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(id).then(show).catch(function () { fallback(id, show); });
+  } else { fallback(id, show); }
+});
 document.getElementById('copy').addEventListener('click', function () {
   var url = 'https://jlnahbi.kr/card/';
   var show = function () {

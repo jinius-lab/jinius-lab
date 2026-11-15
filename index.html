@@ -91,6 +91,18 @@ nav {
   transition: color 0.2s;
 }
 .nav-center a:hover { color: var(--ink); }
+/* 수강 과목 */
+.subj-list { border-top: 1px solid var(--rule); background: #fff; border-left: 1px solid var(--rule); border-right: 1px solid var(--rule); }
+.subj-row { display: grid; grid-template-columns: 3.2rem 13rem 1fr; align-items: center; gap: 0 1.2rem; padding: 1.15rem 1.6rem; border-bottom: 1px solid var(--rule); }
+.subj-row i { font-family: 'DM Mono', monospace; font-style: normal; font-size: 0.78rem; letter-spacing: 0.1em; color: var(--gold); }
+.subj-row b { font-size: 1.08rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.subj-row b small { display: block; font-size: 0.74rem; font-weight: 500; color: var(--muted); margin-top: 0.15rem; }
+.subj-row span { font-size: 0.97rem; color: var(--ink2); line-height: 1.75; word-break: keep-all; }
+@media (max-width: 700px) {
+  .subj-row { grid-template-columns: 2.2rem 1fr; padding: 1rem 1.1rem; row-gap: 0.25rem; }
+  .subj-row span { grid-column: 2; font-size: 0.92rem; }
+}
+
 
 .nav-cta {
   font-family: 'DM Mono', monospace;
@@ -1224,6 +1236,31 @@ footer p {
     <div class="stat-label">개인별 관리</div>
   </div>
 </div>
+
+<!-- SUBJECTS : 수강 과목 및 서비스 안내 -->
+<section id="subjects" style="background: var(--cream); border-bottom: 1px solid var(--rule);">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-tag">Subjects</div>
+        <h2 class="section-title">수강 과목<br><em>및 서비스 안내</em></h2>
+      </div>
+      <p class="section-sub">수학에서 시작해 국어 · 영어 · 과학, 논술과 입시 설계까지 한 곳에서 이어집니다.</p>
+    </div>
+    <div class="subj-list reveal">
+      <div class="subj-row"><i>01</i><b>국어 · 논리</b><span>내신 대비 · 수능 대비 · 사고력</span></div>
+      <div class="subj-row"><i>02</i><b>영어</b><span>내신영어 · 수능영어</span></div>
+      <div class="subj-row"><i>03</i><b>수학</b><span>내신수학 (자사고 및 내신 세부과목)<br>수능수학 (대수 · 미적분Ⅰ · 확통)</span></div>
+      <div class="subj-row"><i>04</i><b>과학</b><span>내신과학 (통과 · 물화생지 및 내신 세부과목)<br>수능과학 (통합과학)</span></div>
+      <div class="subj-row"><i>05</i><b>KMO · 영재</b><span>KMO · 영재고 · 과학고 대비<br>수학적 사고력 심화 (초등부 등록 가능)</span></div>
+      <div class="subj-row"><i>06</i><b>논술</b><span>인문논술 · 수리논술 · 약술논술</span></div>
+      <div class="subj-row"><i>07</i><b>편입</b><span>편입영어 · 편입수학</span></div>
+      <div class="subj-row"><i>08</i><b>검정고시</b><span>중 · 고등 전과목 (후에 입시 연결 가능)</span></div>
+      <div class="subj-row"><i>09</i><b>AP / IB / SAT</b><span>Calculus AB, BC, Geometry, Algebra<br>Biology, Chemistry, Physics 가능</span></div>
+      <div class="subj-row"><i>10</i><b>입시컨설팅<small>자격증 1, 2급 보유</small></b><span>생기부 · 수행평가 · 수시 관리 · 정시 점수 관리 및<br>전반적 맞춤형 입시 로드맵 설계</span></div>
+    </div>
+  </div>
+</section>
 
 <!-- CURRICULUM -->
 <section id="curriculum">
