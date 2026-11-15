@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
 <title>JL·NAHBI | 교재</title>
-<meta name="description" content="JL·NAHBI 자체 제작 교재 : 개념서 원점, 원점 익힘책, PAPILIO 정규 시리즈, FOCUS 특강 시리즈.">
+<meta name="description" content="JL·NAHBI 자체 제작 교재 : 개념서 원점, 원점 익힘책, 문제집 PAPILIO, 내신 교재 LIMEN·SCHOLA, 특강 FOCUS.">
 <meta property="og:title" content="JL·NAHBI | 교재">
 <meta property="og:description" content="커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 제작 교재.">
 <link rel="icon" href="/favicon.ico">
@@ -122,6 +122,12 @@ a { color: inherit; text-decoration: none; }
 .quote { margin-top: 2.4rem; text-align: center; font-size: 1.02rem; color: var(--ink2); }
 .quote em { font-style: normal; color: var(--gold); }
 
+.row3 + .row3 { margin-top: 2.2rem; }
+.shelf-cap { font-family: 'DM Mono', monospace; font-size: 0.76rem; letter-spacing: 0.14em; color: var(--gold); margin: 3rem 0 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
+.two-shelf { display: flex; flex-wrap: wrap; gap: 1rem 5rem; }
+.two-shelf .shelf-cap { margin-top: 0; padding-top: 0; border-top: none; }
+#papilio .stages { margin-top: 3.2rem; }
+
 /* 준비 중 */
 .soon { border: 1px dashed var(--muted2); background: var(--paper); padding: 2.6rem 2rem; text-align: center; }
 .soon b { display: block; font-size: 1.2rem; color: var(--ink2); }
@@ -195,11 +201,12 @@ footer a:hover { color: var(--navy); }
     <div class="hero-text">
       <div class="tag">Textbooks</div>
       <h1>커리큘럼을 그대로 옮겨 담은<br><em>JL·NAHBI 자체 제작 교재</em></h1>
-      <p>개념은 원점에서 넣고, 익힘책에서 꺼냅니다. 그리고 다섯 단계의 PAPILIO로 이어집니다.</p>
+      <p>개념은 원점에서 넣고, 익힘책에서 꺼냅니다. 문제는 PAPILIO에서 풀고, 학교 시험은 내신 교재로 준비합니다.</p>
       <div class="jump">
         <a href="#wonjeom">원점 · 개념서</a>
         <a href="#workbook">원점 익힘책</a>
-        <a href="#papilio">PAPILIO · 정규</a>
+        <a href="#papilio">PAPILIO · 문제집</a>
+        <a href="#naesin">내신 교재 · L · S</a>
         <a href="#focus">FOCUS · 특강</a>
         <a href="#buy">구매 안내</a>
       </div>
@@ -220,17 +227,23 @@ footer a:hover { color: var(--navy); }
         <div class="badge">개념서 · TEXTBOOK CONCEPT SERIES</div>
         <h2>원점<span>교과서를 한 쪽도 빠짐없이 다시 세운 개념서</span></h2>
       </div>
-      <p>모든 문제는 결국 개념의 원점으로 돌아옵니다. 중학교 세 학년과 고등 다섯 과목, 여덟 갈래입니다.</p>
+      <p>모든 문제는 결국 개념의 원점으로 돌아옵니다. 중학교 세 학년과 고등학교 일곱 과목, 열 권입니다.</p>
     </div>
     <div class="row3">
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-m1.jpg" alt="원점 중1" loading="lazy"><span class="gl"></span></div></div><figcaption>중1</figcaption></figure>
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-m2.jpg" alt="원점 중2" loading="lazy"><span class="gl"></span></div></div><figcaption>중2</figcaption></figure>
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-m3.jpg" alt="원점 중3" loading="lazy"><span class="gl"></span></div></div><figcaption>중3</figcaption></figure>
+    </div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/wonjeom-gs1.jpg" alt="원점 공통수학1" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학1</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/wonjeom-gs2.jpg" alt="원점 공통수학2" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학2</figcaption></figure>
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-daesu.jpg" alt="원점 대수" loading="lazy"><span class="gl"></span></div></div><figcaption>대수</figcaption></figure>
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-mi1.jpg" alt="원점 미적분Ⅰ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅰ</figcaption></figure>
+    </div>
+    <div class="row3">
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-mi2.jpg" alt="원점 미적분Ⅱ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅱ</figcaption></figure>
-      <figure><div class="bw"><div class="b3"><img src="img/wonjeom-giha.jpg" alt="원점 기하" loading="lazy"><span class="gl"></span></div></div><figcaption>기하</figcaption></figure>
       <figure><div class="bw"><div class="b3"><img src="img/wonjeom-hwak.jpg" alt="원점 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/wonjeom-giha.jpg" alt="원점 기하" loading="lazy"><span class="gl"></span></div></div><figcaption>기하</figcaption></figure>
     </div>
   </div>
 </section>
@@ -260,8 +273,24 @@ footer a:hover { color: var(--navy); }
           <div class="step"><i>05 · TEACH</i><b>말로 설명하기</b></div>
           <div class="step"><i>06 · CHECK</i><b>유형 확인하기</b></div>
         </div>
-        <div class="note"><b>첫 권 : 중학교 2학년 수학 Ⅴ 「도형의 닮음」</b> · 다른 단원도 차례로 나옵니다.</div>
       </div>
+    </div>
+    <div class="shelf-cap">원점과 같은 열 과목</div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-m1.jpg" alt="원점 익힘책 중1" loading="lazy"><span class="gl"></span></div></div><figcaption>중1</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-m2.jpg" alt="원점 익힘책 중2" loading="lazy"><span class="gl"></span></div></div><figcaption>중2</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-m3.jpg" alt="원점 익힘책 중3" loading="lazy"><span class="gl"></span></div></div><figcaption>중3</figcaption></figure>
+    </div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-gs1.jpg" alt="원점 익힘책 공통수학1" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학1</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-gs2.jpg" alt="원점 익힘책 공통수학2" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학2</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-daesu.jpg" alt="원점 익힘책 대수" loading="lazy"><span class="gl"></span></div></div><figcaption>대수</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-mi1.jpg" alt="원점 익힘책 미적분Ⅰ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅰ</figcaption></figure>
+    </div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-mi2.jpg" alt="원점 익힘책 미적분Ⅱ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅱ</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-hwak.jpg" alt="원점 익힘책 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/ikhim-giha.jpg" alt="원점 익힘책 기하" loading="lazy"><span class="gl"></span></div></div><figcaption>기하</figcaption></figure>
     </div>
   </div>
 </section>
@@ -270,20 +299,22 @@ footer a:hover { color: var(--navy); }
   <div class="inner">
     <div class="s-head">
       <div>
-        <div class="badge">정규 · 7과목 × P1—P5</div>
-        <h2>PAPILIO<span>주어진 것에서 전이까지, 다섯 단계를 따라가는 정규 교재</span></h2>
+        <div class="badge">문제집 · 7과목 × P1—P5</div>
+        <h2>PAPILIO<span>개념 다음에 푸는 문제집 : 다섯 단계로 올라갑니다</span></h2>
       </div>
-      <p>개념이 구조가 되고, 구조가 날개가 되는 다섯 단계. 과목마다 같은 다섯 단계를 밟습니다.</p>
+      <p>PAPILIO는 문제집입니다. 개념은 원점에서 세우고, 문제는 PAPILIO에서 풉니다. 과목마다 같은 다섯 단계를 밟습니다.</p>
     </div>
 
-    <div class="books">
-      <div class="book" style="background:linear-gradient(180deg,#66714A,#55603A 32%,#3A4227)"><div class="k">PAPILIO</div><div class="n">공통수학 1</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#3A6A70,#2E555A 32%,#1D383C)"><div class="k">PAPILIO</div><div class="n">공통수학 2</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#35486B,#2A3A56 32%,#1B2638)"><div class="k">PAPILIO</div><div class="n">대수</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#573D63,#46304F 32%,#2D1F33)"><div class="k">PAPILIO</div><div class="n">미적분 1</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#703A46,#5C2E38 32%,#3B1E25)"><div class="k">PAPILIO</div><div class="n">미적분 2</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#8B5636,#7A4A2E 32%,#593620)"><div class="k">PAPILIO</div><div class="n">확률과 통계</div><div class="m">P1 — P5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#43454C,#34363B 32%,#212226)"><div class="k">PAPILIO</div><div class="n">기하</div><div class="m">P1 — P5</div></div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-gs1.jpg" alt="PAPILIO 공통수학1" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학1</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-gs2.jpg" alt="PAPILIO 공통수학2" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학2</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-daesu.jpg" alt="PAPILIO 대수" loading="lazy"><span class="gl"></span></div></div><figcaption>대수</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-mi1.jpg" alt="PAPILIO 미적분Ⅰ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅰ</figcaption></figure>
+    </div>
+    <div class="row3">
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-mi2.jpg" alt="PAPILIO 미적분Ⅱ" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분Ⅱ</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-hwak.jpg" alt="PAPILIO 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계</figcaption></figure>
+      <figure><div class="bw"><div class="b3"><img src="img/papilio-giha.jpg" alt="PAPILIO 기하" loading="lazy"><span class="gl"></span></div></div><figcaption>기하</figcaption></figure>
     </div>
 
     <div class="stages">
@@ -293,12 +324,37 @@ footer a:hover { color: var(--navy); }
       <div class="stage"><i>P4</i><b>WING</b><em>참형상</em><p>구조가 보이는 사람 : 문제를 푸는 자가 아니라 꿰뚫는 자.</p></div>
       <div class="stage"><i>P5</i><b>FLY</b><em>전이</em><p>배운 적 없는 문제 위로 날아오른다 : 그것이 배움의 완성이다.</p></div>
     </div>
-
-    <div class="note"><b>PAPILIO는 수업 교재입니다.</b> JL·NAHBI 수업에서 단계에 맞춰 함께 씁니다.</div>
   </div>
 </section>
 
-<section class="series alt" id="focus">
+<section class="series alt" id="naesin">
+  <div class="inner">
+    <div class="s-head">
+      <div>
+        <div class="badge">내신 교재 · LIMEN &amp; SCHOLA</div>
+        <h2>내신 교재<span>중학교는 L 시리즈, 고등학교는 S 시리즈</span></h2>
+      </div>
+      <p>학교 시험을 준비하는 책입니다. 중학교 내신은 LIMEN, 고등학교 내신은 SCHOLA로 갑니다.</p>
+    </div>
+    <div class="two-shelf">
+      <div>
+        <div class="shelf-cap">L 시리즈 · LIMEN · 중학교</div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/limen-l1.jpg" alt="LIMEN L1 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L1 SEED</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-l2.jpg" alt="LIMEN L2 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L2 GROW</figcaption></figure>
+        </div>
+      </div>
+      <div>
+        <div class="shelf-cap">S 시리즈 · SCHOLA · 고등학교</div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/schola-mi1.jpg" alt="SCHOLA 미적분 1" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 1 · 기말고사 대비</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="series" id="focus">
   <div class="inner">
     <div class="s-head">
       <div>
