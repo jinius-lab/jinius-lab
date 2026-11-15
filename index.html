@@ -1342,8 +1342,9 @@ footer p {
 .prem-item i { font-size: 0.97rem; font-weight: 500; }
 .prem-top { padding-left: 1.8rem; gap: 1.3rem; }
 .prem-top p { font-size: 0.98rem; }
+.prem-top p .pl { display: block; white-space: nowrap; }
 .prem-grid { grid-template-columns: 0.95fr 1.05fr; gap: 3rem; }
-@media (max-width: 1150px) { .prem-top { flex-direction: column; align-items: flex-start; gap: 1rem; padding-left: 0; } }
+@media (max-width: 1270px) { .prem-top { flex-direction: column; align-items: flex-start; gap: 1rem; padding-left: 0; } }
 /* 모집 띠 */
 .bn { display: none; }
 body.has-bn { --bn-h: 40px; padding-top: var(--bn-h); }
@@ -1383,6 +1384,7 @@ body.has-bn nav { top: var(--bn-h); }
   .section-title .t-s41 { font-size: 0.5em; }
   .premium .section-title em.prem-sub2 { font-size: 0.56em; }
   .prem-top { padding-left: 0; gap: 1rem; }
+  .prem-top p { font-size: min(0.98rem, 4vw); }
   .prem-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .care-foot { font-size: 0.95rem; }
   .section-title em.t-kor { font-size: 0.6em; }
@@ -1798,7 +1800,7 @@ body.has-bn nav { top: var(--bn-h); }
       <div class="prem-big">
         <div class="prem-top">
           <div class="prem-six"><b>6</b><span>자리</span></div>
-          <p>원장이 특별히 관리하는 여섯명입니다.<br>그 여섯 명을 <strong>「나의 여섯 개의 별」</strong>이라고 부릅니다.<br>입시가 끝나는 날까지 끝까지 책임지고 함께 갑니다.</p>
+          <p><span class="pl">원장이 특별히 관리하는 여섯 명입니다.</span><span class="pl">그 여섯 명을 <strong>「나의 여섯 개의 별」</strong>이라고 부릅니다.</span><span class="pl">입시가 끝나는 날까지 끝까지 책임지고 함께 갑니다.</span></p>
         </div>
         <figure class="prem-map"><img src="/premium-seatmap.jpg" alt="JL 프리미엄 독서실 배치도 : 가운데 통로 양쪽으로 01번부터 06번까지 여섯 자리" width="880" height="819" loading="lazy"></figure>
       </div>
