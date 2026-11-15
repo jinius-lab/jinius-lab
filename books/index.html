@@ -99,6 +99,10 @@ a { color: inherit; text-decoration: none; }
 .pile .bw:nth-child(4) { transform: translateY(16px); z-index: 4; margin-left: -70px; }
 .pile .bw:nth-child(4) .b3 { --w: 214px; --t: 9px; }
 
+.pile.two .b3 { --w: 232px; --t: 15px; }
+.pile.two .bw:nth-child(1) { transform: translateY(-22px); z-index: 1; }
+.pile.two .bw:nth-child(2) { margin-left: -96px; transform: translateY(14px); z-index: 2; }
+.pile.two .bw:nth-child(2) .b3 { --w: 250px; --t: 9px; }
 .row3 { display: flex; flex-wrap: wrap; gap: 2.4rem 0.4rem; padding: 0.5rem 1.5rem 1rem 0; }
 .row3 .bw { margin-right: -34px; }
 .row3 .b3 { --w: 168px; --t: 13px; }
@@ -126,6 +130,8 @@ a { color: inherit; text-decoration: none; }
 .shelf-cap { font-family: 'DM Mono', monospace; font-size: 0.76rem; letter-spacing: 0.14em; color: var(--gold); margin: 3rem 0 1.4rem; padding-top: 1.4rem; border-top: 1px solid var(--rule); }
 .two-shelf { display: flex; flex-wrap: wrap; gap: 1rem 5rem; }
 .two-shelf .shelf-cap { margin-top: 0; padding-top: 0; border-top: none; }
+.shelf-cap.first { margin-top: 0; padding-top: 0; border-top: none; }
+.row3 figcaption { max-width: 9.5rem; word-break: keep-all; line-height: 1.5; }
 #papilio .stages { margin-top: 3.2rem; }
 
 /* 준비 중 */
@@ -165,6 +171,9 @@ footer a:hover { color: var(--navy); }
   .pile .bw { margin-left: -58px; }
   .pile .bw:nth-child(4) { margin-left: -44px; }
   .pile .bw:nth-child(4) .b3 { --w: 134px; --t: 6px; }
+  .pile.two .b3 { --w: 142px; --t: 10px; }
+  .pile.two .bw:nth-child(2) { margin-left: -60px; }
+  .pile.two .bw:nth-child(2) .b3 { --w: 154px; --t: 6px; }
   .row3 { gap: 1.8rem 0; }
   .row3 .b3 { --w: 112px; --t: 9px; }
   .row3 .bw { margin-right: -14px; }
@@ -211,11 +220,9 @@ footer a:hover { color: var(--navy); }
         <a href="#buy">구매 안내</a>
       </div>
     </div>
-    <div class="pile" aria-hidden="true">
-      <div class="bw"><div class="b3"><img src="img/wonjeom-mi1.jpg" alt="원점 미적분Ⅰ" loading="lazy"><span class="gl"></span></div></div>
-      <div class="bw"><div class="b3"><img src="img/wonjeom-daesu.jpg" alt="원점 대수" loading="lazy"><span class="gl"></span></div></div>
-      <div class="bw"><div class="b3"><img src="img/wonjeom-m2.jpg" alt="원점 중2" loading="lazy"><span class="gl"></span></div></div>
-      <div class="bw"><div class="b3"><img src="img/ikhim-m2-5.jpg" alt="원점 익힘책 중2 도형의 닮음" loading="lazy"><span class="gl"></span></div></div>
+    <div class="pile two" aria-hidden="true">
+      <div class="bw"><div class="b3"><img src="img/wonjeom-sig.jpg" alt="개념서 원점" loading="lazy"><span class="gl"></span></div></div>
+      <div class="bw"><div class="b3"><img src="img/ikhim-sig.jpg" alt="원점 익힘책" loading="lazy"><span class="gl"></span></div></div>
     </div>
   </div>
 </section>
@@ -259,8 +266,8 @@ footer a:hover { color: var(--navy); }
     </div>
     <div class="duo">
       <div class="duo-books" aria-hidden="true">
-        <div class="bw"><div class="b3"><img src="img/wonjeom-m2.jpg" alt="원점 중2" loading="lazy"><span class="gl"></span></div></div>
-        <div class="bw"><div class="b3"><img src="img/ikhim-m2-5.jpg" alt="원점 익힘책 중2 도형의 닮음" loading="lazy"><span class="gl"></span></div></div>
+        <div class="bw"><div class="b3"><img src="img/wonjeom-sig.jpg" alt="개념서 원점" loading="lazy"><span class="gl"></span></div></div>
+        <div class="bw"><div class="b3"><img src="img/ikhim-sig.jpg" alt="원점 익힘책" loading="lazy"><span class="gl"></span></div></div>
       </div>
       <div class="duo-text">
         <div class="lead">개념은 보는 것이 아니라 꺼내는 것.<br>원점에서 넣고, 익힘책에서 꺼낸다.</div>
@@ -336,22 +343,36 @@ footer a:hover { color: var(--navy); }
       </div>
       <p>학교 시험을 준비하는 책입니다. 중학교 내신은 LIMEN, 고등학교 내신은 SCHOLA로 갑니다.</p>
     </div>
-    <div class="two-shelf">
-      <div>
-        <div class="shelf-cap">L 시리즈 · LIMEN · 중학교</div>
+    <div class="shelf-cap first">L 시리즈 · LIMEN · 중학교 : L1 SEED · L2 GROW</div>
         <div class="row3">
-          <figure><div class="bw"><div class="b3"><img src="img/limen-l1.jpg" alt="LIMEN L1 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L1 SEED</figcaption></figure>
-          <figure><div class="bw"><div class="b3"><img src="img/limen-l2.jpg" alt="LIMEN L2 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L2 GROW</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-m1-l1.jpg" alt="LIMEN L1 중학 수학 1" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 1 · L1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-m1-l2.jpg" alt="LIMEN L2 중학 수학 1" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 1 · L2</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-m2-l1.jpg" alt="LIMEN L1 중학 수학 2" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 2 · L1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-m2-l2.jpg" alt="LIMEN L2 중학 수학 2" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 2 · L2</figcaption></figure>
         </div>
-      </div>
-      <div>
-        <div class="shelf-cap">S 시리즈 · SCHOLA · 고등학교</div>
         <div class="row3">
-          <figure><div class="bw"><div class="b3"><img src="img/schola-mi1-s1.jpg" alt="SCHOLA S1 미적분 1 중간고사 대비" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 1 · S1 중간고사</figcaption></figure>
-          <figure><div class="bw"><div class="b3"><img src="img/schola-mi1.jpg" alt="SCHOLA S2 미적분 1 기말고사 대비" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 1 · S2 기말고사</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-l1.jpg" alt="LIMEN L1 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/limen-l2.jpg" alt="LIMEN L2 중학 수학 3" loading="lazy"><span class="gl"></span></div></div><figcaption>중학 수학 3 · L2</figcaption></figure>
         </div>
-      </div>
-    </div>
+    <div class="shelf-cap">S 시리즈 · SCHOLA · 고등학교 : S1 중간고사 · S2 기말고사</div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/schola-gs1-s1.jpg" alt="SCHOLA S1 공통수학 1" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학 1 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-gs1-s2.jpg" alt="SCHOLA S2 공통수학 1" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학 1 · S2</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-gs2-s1.jpg" alt="SCHOLA S1 공통수학 2" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학 2 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-gs2-s2.jpg" alt="SCHOLA S2 공통수학 2" loading="lazy"><span class="gl"></span></div></div><figcaption>공통수학 2 · S2</figcaption></figure>
+        </div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/schola-daesu-s1.jpg" alt="SCHOLA S1 대수" loading="lazy"><span class="gl"></span></div></div><figcaption>대수 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-daesu-s2.jpg" alt="SCHOLA S2 대수" loading="lazy"><span class="gl"></span></div></div><figcaption>대수 · S2</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-mi1-s1.jpg" alt="SCHOLA S1 미적분 1" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 1 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-mi1.jpg" alt="SCHOLA S2 미적분 1" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 1 · S2</figcaption></figure>
+        </div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/schola-mi2-s1.jpg" alt="SCHOLA S1 미적분 2" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 2 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-mi2-s2.jpg" alt="SCHOLA S2 미적분 2" loading="lazy"><span class="gl"></span></div></div><figcaption>미적분 2 · S2</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-hwak-s1.jpg" alt="SCHOLA S1 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계 · S1</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/schola-hwak-s2.jpg" alt="SCHOLA S2 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계 · S2</figcaption></figure>
+        </div>
   </div>
 </section>
 
@@ -365,11 +386,11 @@ footer a:hover { color: var(--navy); }
       <p>정규 과정 사이에서 한 주제만 깊게 봅니다. 네 권, 권마다 다섯 챕터입니다.</p>
     </div>
 
-    <div class="books">
-      <div class="book" style="background:linear-gradient(180deg,#2C4E7A,#1F3A5F 32%,#152941)"><div class="k">FOCUS</div><div class="n">방정식과 함수, 그리고 부등식</div><div class="m">CHAPTER 1 — 5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#7E3B48,#6B2F3A 32%,#4A1F27)"><div class="k">FOCUS</div><div class="n">확률과 통계</div><div class="m">CHAPTER 1 — 5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#5A3970,#4A2D5C 32%,#331E40)"><div class="k">FOCUS</div><div class="n">도형의 모든 것</div><div class="m">CHAPTER 1 — 5</div></div>
-      <div class="book" style="background:linear-gradient(180deg,#7E522C,#6B4423 32%,#472C14)"><div class="k">FOCUS</div><div class="n">그래프, 이제는 그릴 수 있다!</div><div class="m">CHAPTER 1 — 5</div></div>
+        <div class="row3">
+          <figure><div class="bw"><div class="b3"><img src="img/focus-1.jpg" alt="FOCUS 방정식과 함수, 그리고 부등식" loading="lazy"><span class="gl"></span></div></div><figcaption>방정식과 함수, 그리고 부등식</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/focus-2.jpg" alt="FOCUS 확률과 통계" loading="lazy"><span class="gl"></span></div></div><figcaption>확률과 통계</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/focus-3.jpg" alt="FOCUS 도형의 모든 것" loading="lazy"><span class="gl"></span></div></div><figcaption>도형의 모든 것</figcaption></figure>
+          <figure><div class="bw"><div class="b3"><img src="img/focus-4.jpg" alt="FOCUS 그래프, 이제는 그릴 수 있다!" loading="lazy"><span class="gl"></span></div></div><figcaption>그래프, 이제는 그릴 수 있다!</figcaption></figure>
     </div>
   </div>
 </section>
