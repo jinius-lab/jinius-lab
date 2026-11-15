@@ -112,7 +112,9 @@ nav {
 .premium .section-title { color: var(--paper); word-break: keep-all; }
 .premium .section-title em { color: var(--gold3); }
 .premium .section-tag { color: var(--gold3); }
-.premium .section-sub { color: rgba(250,248,245,0.72); max-width: 360px; }
+.premium .section-sub { color: rgba(250,248,245,0.72); max-width: none; }
+.premium .section-sub .nb { white-space: nowrap; }
+@media (max-width: 520px) { .premium .section-sub .nb { white-space: normal; } }
 .premium .section-header { border-bottom-color: rgba(250,248,245,0.14); }
 .prem-head { display: flex; align-items: center; gap: 2rem; }
 .prem-emblem { width: 150px; height: auto; flex: none; display: block; }
@@ -1622,7 +1624,7 @@ footer p {
           <h2 class="section-title">JL 프리미엄<br><em>여섯 자리, 나비군단</em></h2>
         </div>
       </div>
-      <p class="section-sub">제가 이끄는 2027년 나비군단을 모집합니다. JL 프리미엄 출신이 스펙이 되게 하겠습니다.</p>
+      <p class="section-sub"><span class="nb">제가 이끄는 2027년 나비군단을 모집합니다.</span><br><span class="nb">JL 프리미엄 출신이 스펙이 되게 하겠습니다.</span></p>
     </div>
     <div class="prem-grid reveal">
       <div class="prem-big">
