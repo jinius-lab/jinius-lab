@@ -470,7 +470,7 @@ section { padding: 8rem 3.5rem; }
 
 /* METHOD — 저는 이렇게 수업합니다 */
 .method-hero {
-  margin-top: 3.5rem;
+  margin-top: 0;
   background: linear-gradient(135deg, #2f6244 0%, #1c3a2b 100%);
   color: var(--paper);
   padding: 3.4rem 3rem;
@@ -817,6 +817,21 @@ section { padding: 8rem 3.5rem; }
   -webkit-text-fill-color: transparent;
 }
 #books .section-sub { color: rgba(237,230,211,0.72); max-width: 34rem; }
+#books .section-title em { padding-right: 0.12em; }
+.hb-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.4rem 1.6rem; align-items: start; }
+.hb { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; color: #EDE6D3; min-width: 0; }
+.hb-bw { perspective: 1300px; display: block; margin: 0 0 1.5rem 0.4rem; }
+.hb-b { --w: 150px; --t: 12px; display: block; width: var(--w); aspect-ratio: 600 / 849; position: relative; transform-style: preserve-3d; transform: rotateY(-25deg); transition: transform 0.6s cubic-bezier(.2,.7,.2,1); }
+.hb:hover .hb-b { transform: rotateY(-8deg); }
+.hb-b img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; transform: translateZ(calc(var(--t) / 2)); border-radius: 1px 3px 3px 1px; }
+.hb-gl { position: absolute; inset: 0; transform: translateZ(calc(var(--t) / 2 + 0.5px)); border-radius: 1px 3px 3px 1px; background: linear-gradient(90deg, rgba(0,0,0,0.22) 0, rgba(255,255,255,0.14) 2.2%, rgba(0,0,0,0.08) 4.2%, rgba(255,255,255,0) 9%, rgba(255,255,255,0) 70%, rgba(0,0,0,0.07) 100%); }
+.hb-b::before { content: ""; position: absolute; top: 1.1%; height: 97.8%; left: 0; width: var(--t); transform: translateX(calc(var(--w) - var(--t) / 2 - 2px)) rotateY(90deg); background: repeating-linear-gradient(90deg, #fbf9f2 0 1px, #dcd6c6 1px 2px); }
+.hb-b::after { content: ""; position: absolute; inset: 0; transform: translateZ(calc(var(--t) / -2)); background: #15130f; border-radius: 1px 3px 3px 1px; box-shadow: -16px 14px 30px rgba(0,0,0,0.55); }
+.hb-tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.16em; color: #C6A64F; }
+.hb b { font-size: 1.18rem; font-weight: 700; margin-top: 0.35rem; color: #F6EAC4; word-break: keep-all; }
+.hb-d { font-size: 0.9rem; line-height: 1.7; color: rgba(237,230,211,0.7); margin-top: 0.4rem; word-break: keep-all; }
+@media (max-width: 1000px) { .hb-row { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .hb-row { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; } .hb-b { --w: 118px; --t: 10px; } }
 #books .section-sub .nb { white-space: nowrap; }
 @media (max-width: 520px) { #books .section-sub .nb { white-space: normal; } }
 
@@ -1405,91 +1420,42 @@ footer p {
     <div class="section-header reveal">
       <div>
         <div class="section-tag">Textbooks</div>
-        <h2 class="section-title">PAPILIO &amp; FOCUS<br><em>자체 제작 교재</em></h2>
+        <h2 class="section-title">JL·NAHBI BOOKS<br><em>자체 제작 교재</em></h2>
       </div>
-      <p class="section-sub">일곱 과목 다섯 단계, 그리고 네 권의 특강<br><span class="nb">커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 교재.</span></p>
+      <p class="section-sub">개념서 · 익힘책 · 문제집 · 내신 교재 · 특강<br><span class="nb">커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 교재.</span></p>
     </div>
 
-    <div class="bk-shelfwrap reveal">
-      <div class="bk-label"><b>PAPILIO</b><span>정규 · 7과목 × P1—P5</span><span class="ln"></span></div>
-      <div class="bk-shelf">
-        <div class="bk-gleam"></div>
-        <div class="sp" style="background:linear-gradient(180deg,#66714A,#55603A 32%,#3A4227)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">공통수학 1</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#3A6A70,#2E555A 32%,#1D383C)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">공통수학 2</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#35486B,#2A3A56 32%,#1B2638)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">대수</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#573D63,#46304F 32%,#2D1F33)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">미적분 1</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#703A46,#5C2E38 32%,#3B1E25)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">미적분 2</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#8B5636,#7A4A2E 32%,#593620)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">확률과 통계</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp" style="background:linear-gradient(180deg,#43454C,#34363B 32%,#212226)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8" stroke="#C6A64F" stroke-width="1.5"/><circle cx="13" cy="13" r="1.8" fill="#E7CE86"/></svg></div>
-          <div class="t">기하</div>
-          <div class="b">PAPILIO</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-      </div>
-      <div class="bk-board"></div>
-    </div>
-
-    <div class="bk-shelfwrap reveal" style="margin-top:3.5rem;">
-      <div class="bk-label"><b>FOCUS</b><span>특강 · 4권 × CHAPTER 1—5</span><span class="ln"></span></div>
-      <div class="bk-shelf">
-        <div class="bk-gleam"></div>
-        <div class="sp f" style="background:linear-gradient(180deg,#2C4E7A,#1F3A5F 32%,#152941)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8.5" stroke="#C6A64F" stroke-width="1.3"/><path d="M13 1.5 V7 M13 19 V24.5 M1.5 13 H7 M19 13 H24.5" stroke="#C6A64F" stroke-width="1.2"/><circle cx="13" cy="13" r="2" fill="#E7CE86"/></svg></div>
-          <div class="t">방정식과 함수, 그리고 부등식</div>
-          <div class="b">FOCUS</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp f" style="background:linear-gradient(180deg,#7E3B48,#6B2F3A 32%,#4A1F27)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8.5" stroke="#C6A64F" stroke-width="1.3"/><path d="M13 1.5 V7 M13 19 V24.5 M1.5 13 H7 M19 13 H24.5" stroke="#C6A64F" stroke-width="1.2"/><circle cx="13" cy="13" r="2" fill="#E7CE86"/></svg></div>
-          <div class="t">확률과 통계</div>
-          <div class="b">FOCUS</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp f" style="background:linear-gradient(180deg,#5A3970,#4A2D5C 32%,#331E40)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8.5" stroke="#C6A64F" stroke-width="1.3"/><path d="M13 1.5 V7 M13 19 V24.5 M1.5 13 H7 M19 13 H24.5" stroke="#C6A64F" stroke-width="1.2"/><circle cx="13" cy="13" r="2" fill="#E7CE86"/></svg></div>
-          <div class="t">도형의 모든 것</div>
-          <div class="b">FOCUS</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-        <div class="sp f" style="background:linear-gradient(180deg,#7E522C,#6B4423 32%,#472C14)">
-          <div class="g"><svg viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="8.5" stroke="#C6A64F" stroke-width="1.3"/><path d="M13 1.5 V7 M13 19 V24.5 M1.5 13 H7 M19 13 H24.5" stroke="#C6A64F" stroke-width="1.2"/><circle cx="13" cy="13" r="2" fill="#E7CE86"/></svg></div>
-          <div class="t">그래프, 이제는 그릴 수 있다!</div>
-          <div class="b">FOCUS</div>
-          <div class="ind"><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
-      </div>
-      <div class="bk-board"></div>
+    <div class="hb-row reveal">
+      <a class="hb" href="/books/#wonjeom">
+        <span class="hb-bw"><span class="hb-b"><img src="/books/img/wonjeom-sig.jpg" alt="" loading="lazy"><span class="hb-gl"></span></span></span>
+        <span class="hb-tag">개념서</span>
+        <b>원점</b>
+        <span class="hb-d">교과서를 한 쪽도 빠짐없이 다시 세운 개념서</span>
+      </a>
+      <a class="hb" href="/books/#workbook">
+        <span class="hb-bw"><span class="hb-b"><img src="/books/img/ikhim-sig.jpg" alt="" loading="lazy"><span class="hb-gl"></span></span></span>
+        <span class="hb-tag">익힘책</span>
+        <b>원점 익힘책</b>
+        <span class="hb-d">원점에서 넣고, 익힘책에서 꺼냅니다</span>
+      </a>
+      <a class="hb" href="/books/#papilio">
+        <span class="hb-bw"><span class="hb-b"><img src="/books/img/papilio-hwak.jpg" alt="" loading="lazy"><span class="hb-gl"></span></span></span>
+        <span class="hb-tag">문제집</span>
+        <b>PAPILIO</b>
+        <span class="hb-d">다섯 단계로 올라가는 문제집</span>
+      </a>
+      <a class="hb" href="/books/#naesin">
+        <span class="hb-bw"><span class="hb-b"><img src="/books/img/schola-mi1.jpg" alt="" loading="lazy"><span class="hb-gl"></span></span></span>
+        <span class="hb-tag">내신 교재</span>
+        <b>LIMEN · SCHOLA</b>
+        <span class="hb-d">중학교는 L 시리즈, 고등학교는 S 시리즈</span>
+      </a>
+      <a class="hb" href="/books/#focus">
+        <span class="hb-bw"><span class="hb-b"><img src="/books/img/focus-1.jpg" alt="" loading="lazy"><span class="hb-gl"></span></span></span>
+        <span class="hb-tag">특강</span>
+        <b>FOCUS</b>
+        <span class="hb-d">한 주제를 끝까지 꿰는 특강 교재</span>
+      </a>
     </div>
 
     <div class="bk-foot reveal">
@@ -1508,14 +1474,6 @@ footer p {
 <!-- METHOD -->
 <section id="method" style="background: var(--cream);">
   <div class="section-inner">
-
-    <div class="section-header reveal">
-      <div>
-        <div class="section-tag">Method</div>
-        <h2 class="section-title">저는 이렇게<br><em>수업합니다</em></h2>
-      </div>
-      <p class="section-sub">문제를 많이 푸는 수업이 아니라, 아이가 무엇을 모르는지 정확히 찾아내는 수업입니다.</p>
-    </div>
 
     <div class="method-hero reveal">
       <div class="mh-tag">JL·NAHBI</div>
