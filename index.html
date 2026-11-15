@@ -1279,11 +1279,12 @@ footer p {
 .hero-eyebrow { margin-bottom: 3rem; }
 .hero-left { padding-top: 9rem; }
 .hero-inner { grid-template-columns: minmax(0,1.75fr) minmax(0,1fr); gap: 2.5rem; }
-.hero-title { font-size: clamp(2.2rem, 3.4vw, 3.5rem); line-height: 1.32; word-break: keep-all; }
-.hero-title .ht-l { display: block; }
+.hero-title { font-size: clamp(1.7rem, 3.3vw, 2.9rem); line-height: 1.36; word-break: keep-all; }
+.hero-title .ht-l { display: block; white-space: nowrap; }
 .hero-title em.ht-hl { font-style: normal; font-weight: 600; color: #b23a3a; }
 .hero-desc strong { color: #2b4c7e; font-weight: 700; }
 .hero-desc b { color: var(--ink); font-weight: 500; }
+.hero-desc .hd-l { display: inline-block; }
 .section-sub { word-break: keep-all; }
 .section-sub.sub-w { max-width: 25rem; }
 .section-sub.sub-w2 { max-width: 29rem; }
@@ -1333,18 +1334,21 @@ body.has-bn nav { top: var(--bn-h); }
 .bn a i { font-style: normal; margin-left: 1.1rem; color: #e6c98a; border-bottom: 1px solid rgba(230,201,138,0.6); padding-bottom: 1px; }
 .bn button { position: absolute; right: 0.7rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: rgba(243,234,210,0.7); font-size: 0.95rem; cursor: pointer; padding: 0.4rem 0.5rem; line-height: 1; }
 .bn button:hover { color: #fff; }
+@media (max-width: 350px) { .phone-num { font-size: 11.5vw !important; } }
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; gap: 1.8rem; }
   body.has-bn { --bn-h: 36px; }
   .bn a { font-size: 0.82rem; }
   .bn a i { margin-left: 0.7rem; }
   .bn-d { display: none; }
+  body.has-bn .bn { padding: 0 2.2rem 0 0.8rem; }
   .ne-grid { grid-template-columns: 1fr 1fr; gap: 0.9rem 0.8rem; }
   .ne-tx { padding: 0.8rem 0.8rem 1rem; }
   .ne-tx b { font-size: 0.98rem; }
   .ne-tx p { font-size: 0.8rem; }
   .about-nabi { width: 128px; margin-bottom: -1.8rem; }
-  .hero-title { font-size: clamp(1.45rem, 6.2vw, 2.2rem); }
+  .hero-title { font-size: min(5.4vw, 2.6rem); }
+  .hero-desc { word-break: keep-all; }
   .hero-eyebrow { font-size: 0.8rem; }
   .hero { min-height: 0; }
   .hero-left { padding-top: 9.5rem; }
@@ -1363,7 +1367,7 @@ body.has-bn nav { top: var(--bn-h); }
 <body class="has-bn">
 <!-- 나비군단 모집 띠 : 모집이 끝나면 이 줄과 body의 has-bn 을 뺍니다 -->
 <div class="bn" id="bn">
-  <a href="#premium"><b>2027 나비군단 모집</b><span class="bn-d"> : JL 프리미엄 여섯 자리</span><span class="bn-s"> · 12월 14일부터 신청</span><i>자세히 보기 →</i></a>
+  <a href="#premium"><b>2027 나비군단 모집</b><span class="bn-d"> : JL 프리미엄 여섯 자리</span><span class="bn-s"> · 12월 14일부터 신청</span><i><span class="bn-d">자세히 보기 </span>→</i></a>
   <button type="button" id="bnX" aria-label="닫기">✕</button>
 </div>
 <script>try{if(localStorage.getItem('jl-bn-2027')==='x')document.body.classList.remove('has-bn');}catch(e){}</script>
@@ -1398,7 +1402,7 @@ body.has-bn nav { top: var(--bn-h); }
     </div>
     <div class="hero-right">
       <p class="hero-desc">
-        <strong>과외를 넘어선 정밀함, 학원을 넘어선 시스템.</strong><br>
+        <strong><span class="hd-l">과외를 넘어선 정밀함,</span> <span class="hd-l">학원을 넘어선 시스템.</span></strong><br>
         과외의 <b>장점</b>과 학원의 <b>장점</b>을 모았습니다.<br>
         저랑 맞는다면, 반드시 성공합니다.
       </p>
