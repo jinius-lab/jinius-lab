@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>JL·NAHBI | 교재</title>
+<meta name="description" content="JL·NAHBI 자체 제작 교재 : PAPILIO 정규 시리즈와 FOCUS 특강 시리즈.">
+<meta property="og:title" content="JL·NAHBI | 교재">
+<meta property="og:description" content="커리큘럼을 그대로 옮겨 담은 JL·NAHBI 자체 제작 교재.">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Noto+Serif+KR:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f7f4ef; --paper: #faf8f5; --ink: #1a1814; --ink2: #2d2a25;
+  --navy: #1c3a2b; --muted: #7a7570; --muted2: #b5b0a6;
+  --gold: #9a7d4a; --gold2: #c4a06a; --gold3: #e8c97e;
+  --rule: rgba(26,24,20,0.1); --rule2: rgba(26,24,20,0.05);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: 'Noto Serif KR', serif; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+
+/* 머리 */
+.top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.9rem 3.5rem; background: rgba(250,248,245,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--rule); }
+.brand { display: flex; align-items: center; gap: 0.7rem; }
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+.brand b { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; letter-spacing: 0.08em; color: var(--navy); }
+.top-links { display: flex; align-items: center; gap: 1.6rem; font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.top-links a:hover { color: var(--ink); }
+.top-links .cta { color: var(--navy); border: 1px solid var(--navy); padding: 0.5rem 1.1rem; }
+.top-links .cta:hover { background: var(--navy); color: var(--paper); }
+
+/* 여는 글 */
+.hero { padding: 6rem 3.5rem 4.5rem; background: var(--cream); border-bottom: 1px solid var(--rule); }
+.inner { max-width: 1120px; margin: 0 auto; }
+.tag { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
+.hero h1 em { font-style: normal; color: var(--navy); }
+.hero p { margin-top: 1.4rem; max-width: 34rem; color: var(--muted); font-size: 1.02rem; }
+.jump { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 2.2rem; }
+.jump a { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.1em; padding: 0.55rem 1rem; border: 1px solid var(--rule); background: var(--paper); color: var(--ink2); }
+.jump a:hover { border-color: var(--navy); color: var(--navy); }
+
+/* 시리즈 */
+.series { padding: 5rem 3.5rem; border-bottom: 1px solid var(--rule); }
+.series.alt { background: var(--cream); }
+.s-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.6rem; }
+.s-head h2 { font-family: 'Cinzel', serif; font-size: clamp(1.9rem, 4vw, 2.7rem); font-weight: 600; letter-spacing: 0.12em; color: var(--navy); line-height: 1.2; }
+.s-head h2 span { display: block; font-family: 'Noto Serif KR', serif; font-size: 1rem; font-weight: 500; letter-spacing: 0; color: var(--ink2); margin-top: 0.5rem; }
+.s-head p { max-width: 24rem; color: var(--muted); font-size: 0.96rem; text-align: right; }
+.badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; padding: 0.3rem 0.7rem; border: 1px solid var(--gold2); color: var(--gold); background: rgba(196,160,106,0.08); margin-bottom: 0.9rem; }
+
+.books { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+.book { position: relative; aspect-ratio: 3 / 4.1; padding: 1.1rem 1rem 1rem; color: #f4ecd8; display: flex; flex-direction: column; justify-content: space-between;
+  box-shadow: 0 10px 24px -14px rgba(0,0,0,0.5), inset 5px 0 0 rgba(0,0,0,0.18), inset 6px 0 0 rgba(255,255,255,0.06); }
+.book .k { font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.26em; color: var(--gold3); }
+.book .n { font-size: 1.12rem; font-weight: 600; line-height: 1.4; word-break: keep-all; }
+.book .m { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.12em; color: rgba(244,236,216,0.62); }
+.book::after { content: ""; position: absolute; left: 1rem; right: 1rem; top: 2.6rem; height: 1px; background: rgba(232,201,126,0.35); }
+
+.stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 2.6rem; border: 1px solid var(--rule); background: #fff; }
+.stage { padding: 1.3rem 1.1rem 1.4rem; border-right: 1px solid var(--rule); }
+.stage:last-child { border-right: none; }
+.stage i { font-family: 'DM Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.14em; color: var(--gold); }
+.stage b { display: block; font-family: 'Cinzel', serif; font-size: 1.05rem; letter-spacing: 0.14em; color: var(--navy); margin-top: 0.3rem; }
+.stage em { display: block; font-style: normal; font-size: 0.86rem; font-weight: 600; color: var(--ink2); margin-top: 0.15rem; }
+.stage p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-top: 0.6rem; word-break: keep-all; }
+
+.note { margin-top: 2.2rem; padding: 1.2rem 1.4rem; border-left: 2px solid var(--gold2); background: rgba(196,160,106,0.07); font-size: 0.94rem; color: var(--ink2); }
+.note b { color: var(--navy); }
+
+/* 준비 중 */
+.soon { border: 1px dashed var(--muted2); background: var(--paper); padding: 2.6rem 2rem; text-align: center; }
+.soon b { display: block; font-size: 1.2rem; color: var(--ink2); }
+.soon p { color: var(--muted); font-size: 0.95rem; margin-top: 0.6rem; }
+
+/* 구매 */
+.buy { padding: 5rem 3.5rem; background: var(--navy); color: #efe9dc; }
+.buy .tag { color: var(--gold3); }
+.buy h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 600; line-height: 1.4; }
+.buy p { margin-top: 1rem; max-width: 36rem; color: rgba(239,233,220,0.72); font-size: 0.98rem; }
+.buy-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
+.btn { font-family: 'DM Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; padding: 0.8rem 1.4rem; border: 1px solid rgba(232,201,126,0.55); color: var(--gold3); }
+.btn.off { border-style: dashed; color: rgba(239,233,220,0.5); border-color: rgba(239,233,220,0.3); cursor: default; }
+a.btn:hover { background: var(--gold3); color: var(--navy); }
+
+footer { padding: 2rem 3.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--paper); border-top: 1px solid var(--rule); font-size: 0.85rem; color: var(--muted); }
+footer a { font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.1em; }
+footer a:hover { color: var(--navy); }
+
+@media (max-width: 860px) {
+  .top { padding: 0.8rem 1.2rem; }
+  .top-links { gap: 0.9rem; font-size: 0.7rem; }
+  .top-links .hide-s { display: none; }
+  .hero { padding: 4rem 1.5rem 3.2rem; }
+  .series, .buy { padding: 3.6rem 1.5rem; }
+  .s-head { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .s-head p { text-align: left; max-width: 100%; }
+  .books { grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 0.8rem; }
+  .stages { grid-template-columns: 1fr; }
+  .stage { border-right: none; border-bottom: 1px solid var(--rule); }
+  .stage:last-child { border-bottom: none; }
+  footer { flex-direction: column; padding: 1.6rem 1.5rem; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="JL·NAHBI 홈으로">
+    <img src="/icon-192.png" alt="">
+    <b>JL·NAHBI</b>
+  </a>
+  <nav class="top-links">
+    <a class="hide-s" href="/">Home</a>
+    <a class="hide-s" href="/#curriculum">Curriculum</a>
+    <a class="cta" href="/#contact">상담 예약</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <div class="tag">Textbooks</div>
+    <h1>커리큘럼을 그대로 옮겨 담은<br><em>JL·NAHBI 자체 제작 교재</em></h1>
+    <p>교재는 커리큘럼의 그림자입니다. 다섯 단계가 지면 위에 그대로 놓여 있습니다.</p>
+    <div class="jump">
+      <a href="#papilio">PAPILIO · 정규</a>
+      <a href="#focus">FOCUS · 특강</a>
+      <a href="#workbook">익힘책 · 준비 중</a>
+      <a href="#buy">구매 안내</a>
+    </div>
+  </div>
+</section>
+
+<section class="series" id="papilio">
+  <div class="inner">
+    <div class="s-head">
+      <div>
+        <div class="badge">정규 · 7과목 × P1—P5</div>
+        <h2>PAPILIO<span>주어진 것에서 전이까지, 다섯 단계를 따라가는 정규 교재</span></h2>
+      </div>
+      <p>개념이 구조가 되고, 구조가 날개가 되는 다섯 단계. 과목마다 같은 다섯 단계를 밟습니다.</p>
+    </div>
+
+    <div class="books">
+      <div class="book" style="background:linear-gradient(180deg,#66714A,#55603A 32%,#3A4227)"><div class="k">PAPILIO</div><div class="n">공통수학 1</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#3A6A70,#2E555A 32%,#1D383C)"><div class="k">PAPILIO</div><div class="n">공통수학 2</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#35486B,#2A3A56 32%,#1B2638)"><div class="k">PAPILIO</div><div class="n">대수</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#573D63,#46304F 32%,#2D1F33)"><div class="k">PAPILIO</div><div class="n">미적분 1</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#703A46,#5C2E38 32%,#3B1E25)"><div class="k">PAPILIO</div><div class="n">미적분 2</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#8B5636,#7A4A2E 32%,#593620)"><div class="k">PAPILIO</div><div class="n">확률과 통계</div><div class="m">P1 — P5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#43454C,#34363B 32%,#212226)"><div class="k">PAPILIO</div><div class="n">기하</div><div class="m">P1 — P5</div></div>
+    </div>
+
+    <div class="stages">
+      <div class="stage"><i>P1</i><b>SEED</b><em>주어진 것</em><p>개념·정의·공리 : 모든 풀이가 시작되는 지점을 단단히 놓는다.</p></div>
+      <div class="stage"><i>P2</i><b>GROW</b><em>축적</em><p>유형 훈련의 계절 : 폭식하듯 흡수하며 풀이의 재료를 쌓는다.</p></div>
+      <div class="stage"><i>P3</i><b>BUILD</b><em>재구조화</em><p>흩어진 유형이 하나의 구조로 재조립되는, 커리큘럼의 심장부.</p></div>
+      <div class="stage"><i>P4</i><b>WING</b><em>참형상</em><p>구조가 보이는 사람 : 문제를 푸는 자가 아니라 꿰뚫는 자.</p></div>
+      <div class="stage"><i>P5</i><b>FLY</b><em>전이</em><p>배운 적 없는 문제 위로 날아오른다 : 그것이 배움의 완성이다.</p></div>
+    </div>
+
+    <div class="note"><b>PAPILIO는 수업 교재입니다.</b> JL·NAHBI 수업에서 단계에 맞춰 함께 씁니다.</div>
+  </div>
+</section>
+
+<section class="series alt" id="focus">
+  <div class="inner">
+    <div class="s-head">
+      <div>
+        <div class="badge">특강 · 4권 × CHAPTER 1—5</div>
+        <h2>FOCUS<span>한 주제를 처음부터 끝까지 꿰는 특강 교재</span></h2>
+      </div>
+      <p>정규 과정 사이에서 한 주제만 깊게 봅니다. 네 권, 권마다 다섯 챕터입니다.</p>
+    </div>
+
+    <div class="books">
+      <div class="book" style="background:linear-gradient(180deg,#2C4E7A,#1F3A5F 32%,#152941)"><div class="k">FOCUS</div><div class="n">방정식과 함수, 그리고 부등식</div><div class="m">CHAPTER 1 — 5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#7E3B48,#6B2F3A 32%,#4A1F27)"><div class="k">FOCUS</div><div class="n">확률과 통계</div><div class="m">CHAPTER 1 — 5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#5A3970,#4A2D5C 32%,#331E40)"><div class="k">FOCUS</div><div class="n">도형의 모든 것</div><div class="m">CHAPTER 1 — 5</div></div>
+      <div class="book" style="background:linear-gradient(180deg,#7E522C,#6B4423 32%,#472C14)"><div class="k">FOCUS</div><div class="n">그래프, 이제는 그릴 수 있다!</div><div class="m">CHAPTER 1 — 5</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="series" id="workbook">
+  <div class="inner">
+    <div class="s-head">
+      <div>
+        <div class="badge">준비 중</div>
+        <h2>익힘책<span>배운 것을 손으로 다시 익히는 책</span></h2>
+      </div>
+      <p>지금 만들고 있습니다. 나오는 대로 이 자리에 소개합니다.</p>
+    </div>
+    <div class="soon">
+      <b>출간 준비 중입니다</b>
+      <p>책이 나오면 차례와 미리보기를 이곳에 올리겠습니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="buy" id="buy">
+  <div class="inner">
+    <div class="tag">How to Buy</div>
+    <h2>구매 안내</h2>
+    <p>교재는 네이버 스마트스토어에서 만나실 수 있도록 준비하고 있습니다. 열리면 이곳의 단추가 스토어로 이어집니다. 그 전에 궁금하신 점은 문자로 남겨 주세요.</p>
+    <div class="buy-row">
+      <span class="btn off">네이버 스마트스토어 · 준비 중</span>
+      <a class="btn" href="/#contact">문자 상담 010.7919.5348</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/">← JL·NAHBI 홈으로</a>
+  <p>© 2017 JL·NAHBI · 대치동 · 잠실동</p>
+</footer>
+
+</body>
+</html>
