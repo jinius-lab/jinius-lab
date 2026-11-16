@@ -1404,6 +1404,66 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
   .papilio-caption p{margin-left:6px}
   .papilio-caption span{margin-top:auto;font-size:1.34rem;line-height:1.2;white-space:nowrap}
 }
+/* ═══ 1:1 프라이빗 과외 (2026-11-16) : 초대 코드로 여는 칸. 코드와 안쪽 내용은 서버(my.jlnahbi.kr 의 tutor 함수)에만 있다 ═══ */
+.nav-center a.nav-pv{color:#7d6230;border:1px solid var(--gold);padding:.28rem .7rem;margin:-.28rem 0;letter-spacing:.03em;font-weight:600;background:linear-gradient(180deg,rgba(196,160,106,.2),rgba(196,160,106,.04))}
+.nav-center a.nav-pv:hover{background:var(--gold);color:#fff}
+@media (min-width:901px) and (max-width:960px){.nav-center{gap:.6rem!important}}
+@media (min-width:901px) and (max-width:1180px){nav{padding:1rem 1.5rem}.nav-center{gap:.8rem}.nav-center a{font-size:.82rem;letter-spacing:.01em}.nav-center a.nav-pv{padding:.24rem .5rem;margin:-.24rem 0}.nav-cta{padding:.5rem .9rem;font-size:.72rem}}
+#private{background:var(--paper);padding:5.5rem 3.5rem;scroll-margin-top:5rem}
+.pv{--pg:#D8BC78;--pi:#F1EAD6;--pd:#a9b3a6;--pl:#3a4a3f;max-width:980px;margin:0 auto;position:relative;overflow:hidden;color:var(--pi);word-break:keep-all;
+  background:radial-gradient(120% 90% at 85% -10%,#24382c 0%,#14211a 55%,#0e1813 100%);border:1px solid #6d5b33;padding:3.4rem 3.2rem;
+  box-shadow:0 30px 80px rgba(10,20,14,.32),inset 0 0 0 6px #14211a,inset 0 0 0 7px rgba(216,188,120,.35)}
+.pv-seal{position:absolute;right:2.2rem;top:2.1rem;width:70px;height:70px;border:1px solid var(--pg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--pg)}
+.pv-seal::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(216,188,120,.5);border-radius:50%}
+.pv-tag{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--pg)}
+.pv-tag::after{content:"";display:block;width:46px;height:1px;background:var(--pg);margin-top:.85rem}
+.pv h2{font-family:'Cormorant Garamond','Noto Serif KR',serif;font-weight:600;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.25;margin:.8rem 0 1.3rem;color:#F6EFDC}
+.pv h2 em{font-style:italic;color:var(--pg)}
+.pv-lead{font-family:'Noto Serif KR',serif;font-size:1rem;line-height:1.95;margin:0 0 1.15rem;max-width:560px;color:var(--pi)}
+.pv-lead small{font-size:.8rem;color:var(--pd)}
+.pv-path{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:1.8rem 0 1.6rem}
+.pv-path div{border-top:1px solid #6d5b33;padding:.75rem .1rem 0;font-family:'Noto Serif KR',serif;font-size:.86rem}
+.pv-path b{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:1.5rem;color:var(--pg);margin-bottom:.1rem}
+.pv-btn{font-family:'Noto Serif KR',serif;font-size:.92rem;font-weight:600;letter-spacing:.08em;padding:.72rem 1.3rem;border:1px solid var(--pg);background:transparent;color:var(--pg);cursor:pointer;transition:.2s;text-decoration:none;display:inline-block}
+.pv-btn:hover,.pv-btn.fill{background:var(--pg);color:#14211a}
+.pv-btn.fill:hover{background:#e6cf96}
+.pv-btn[disabled]{opacity:.5;cursor:default}
+.pv-code{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1.1rem}
+.pv-code input{font:700 1.15rem/1 ui-monospace,'DM Mono',monospace;letter-spacing:.3em;text-transform:uppercase;padding:.75rem .8rem;width:13rem;max-width:100%;border:1px solid #6d5b33;background:rgba(0,0,0,.25);color:#F6EFDC}
+.pv-code input::placeholder{letter-spacing:.2em;font-weight:400;color:#6f7a70;font-family:'Noto Serif KR',serif;font-size:.9rem}
+.pv-msg{font-size:.86rem;margin-top:.6rem;min-height:1.3rem;color:var(--pd)}
+.pv-msg.bad{color:#ff9d92}
+.pv-note{font-size:.76rem;color:var(--pd);margin:.9rem 0 0}
+.pv-bar{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap;border:1px solid var(--pg);background:rgba(216,188,120,.08);padding:.6rem .9rem;font-size:.84rem;margin-bottom:1.6rem}
+.pv-bar b{font-variant-numeric:tabular-nums}
+.pv-info{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1.6rem}
+.pv-info>div{border:1px solid var(--pl);background:rgba(0,0,0,.18);padding:.85rem .95rem;font-size:.88rem;line-height:1.75;color:var(--pd)}
+.pv-info>div.wide{grid-column:1/-1}
+.pv-info b{display:block;font-family:'Noto Serif KR',serif;font-size:.86rem;color:var(--pg);margin-bottom:.2rem}
+.pv-opt{display:flex;gap:1rem;align-items:center;color:var(--pi);font-size:.95rem}
+.pv-opt label{display:flex;gap:.4rem;align-items:center;cursor:pointer}
+.pv-opt input[type=radio]{accent-color:#D8BC78}
+.pv-opt input[type=number]{width:3.4rem;text-align:center;padding:.4rem;border:1px solid var(--pl);background:rgba(0,0,0,.25);color:var(--pi);font:inherit}
+.pv h3{font-family:'Noto Serif KR',serif;font-size:.98rem;font-weight:600;letter-spacing:.04em;color:var(--pg);margin:1.5rem 0 .6rem}
+.pv-grid{display:grid;gap:4px;font-size:.78rem}
+.pv-grid .h{text-align:center;font-weight:700;color:var(--pd);padding:.25rem 0}
+.pv-grid .t{color:var(--pd);display:flex;align-items:center;justify-content:flex-end;padding-right:.4rem;font-variant-numeric:tabular-nums}
+.pv-sl{border:1px solid var(--pl);min-height:2.3rem;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.2);color:var(--pd);font-size:.74rem;user-select:none}
+.pv-sl.open{border-color:#9fd3b0;color:#9fd3b0;font-weight:700;cursor:pointer;background:#14211a}
+.pv-sl.open:hover{background:#1d2c24}
+.pv-sl.open.pick,.pv-sl.open.pick:hover{background:var(--pg);border-color:var(--pg);color:#14211a}
+.pv-sl.wait{border:1px dashed var(--pg);color:var(--pg);cursor:pointer;background:transparent}
+.pv-sl.wait.pick{border:2px solid var(--pg);font-weight:800}
+.pv-legend{display:flex;gap:.9rem;flex-wrap:wrap;font-size:.74rem;color:var(--pd);margin-top:.55rem}
+.pv-legend i{display:inline-block;width:11px;height:11px;margin-right:4px;vertical-align:-1px;border:1px solid var(--pl)}
+.pv-picks{font-size:.86rem;margin:.5rem 0 .7rem;color:var(--pi);line-height:1.8}
+.pv-form{display:grid;grid-template-columns:1fr 1fr;gap:.55rem}
+.pv-form input,.pv-form textarea{width:100%;padding:.65rem .8rem;border:1px solid var(--pl);background:rgba(0,0,0,.25);color:var(--pi);font:inherit;font-size:.9rem}
+.pv-form textarea{grid-column:1/-1;min-height:4.4rem;resize:vertical}
+.pv-agree{font-size:.8rem;color:var(--pd);display:flex;gap:.45rem;align-items:flex-start;margin:.8rem 0}
+.pv-done{text-align:center;padding:1.6rem .4rem}
+.pv [hidden]{display:none!important}
+@media (max-width:900px){#private{padding:3.6rem 1.2rem}.pv{padding:2.4rem 1.4rem}.pv-seal{width:50px;height:50px;font-size:1.1rem;right:1.1rem;top:1.1rem}.pv-path{grid-template-columns:1fr 1fr}.pv-info,.pv-form{grid-template-columns:1fr}.pv-grid{font-size:.7rem;gap:3px}.pv-sl{font-size:.66rem;min-height:2.1rem}.pv-grid .t{padding-right:.2rem}}
 </style>
 </head>
 <body class="has-bn">
@@ -1426,6 +1486,7 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
     <a href="#method">관리 및 시스템</a>
     <a href="#philosophy">교육 철학</a>
     <a href="#contact">오시는 길</a>
+    <a href="#private" class="nav-pv">1:1 프라이빗 과외</a>
   </div>
   <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">상담 예약</button>
 </nav>
@@ -2013,6 +2074,63 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
   </div>
 </section>
 
+<!-- 1:1 프라이빗 과외 : 초대 코드로 여는 칸 (2026-11-16) -->
+<section id="private">
+  <div class="pv reveal" id="pv">
+    <div class="pv-seal" aria-hidden="true">JL</div>
+    <div id="pvOut">
+      <div class="pv-tag">Private · By Invitation</div>
+      <h2>1:1 <em>프라이빗</em> 과외</h2>
+      <p class="pv-lead">1:1로 배우고 싶은 분들을 위한 자리입니다.</p>
+      <p class="pv-lead">선생님이 찾아가는 방문 수업과,<br>과외 공간으로 오시는 수업 가운데 고르실 수 있습니다.<br><small>(교습비는 수업 방식에 따라 다릅니다)</small></p>
+      <p class="pv-lead">레벨테스트는 필수입니다.<br>답만이 아니라 풀이 과정까지 함께 봅니다.</p>
+      <p class="pv-lead">이후 심층 면접을 거쳐 받으신 코드로 입장하셔서,<br>수업 가능 스케줄과 수업 내용을 확인하시고 결정하시면 됩니다.</p>
+      <div class="pv-path"><div><b>01</b>레벨테스트</div><div><b>02</b>심층 면접</div><div><b>03</b>초대 코드로 입장</div><div><b>04</b>스케줄 확인과 결정</div></div>
+      <a class="pv-btn fill" href="#contact">레벨테스트 문의</a>
+      <form class="pv-code" id="pvCodeForm" autocomplete="off">
+        <input id="pvCode" maxlength="8" placeholder="초대 코드" aria-label="초대 코드" autocapitalize="characters" spellcheck="false">
+        <button class="pv-btn" id="pvOpen" type="submit">열기</button>
+      </form>
+      <div class="pv-msg" id="pvMsg" role="status"></div>
+      <p class="pv-note">초대 코드는 레벨테스트와 심층 면접을 마친 분께 드립니다. 처음 연 때부터 하루 동안 열립니다.</p>
+    </div>
+    <div id="pvIn" hidden>
+      <div class="pv-bar"><span>🔑 <span id="pvWho"></span> 학생에게 드린 초대입니다</span><span>남은 시간 <b id="pvLeft"></b></span></div>
+      <div class="pv-tag">Private · By Invitation</div>
+      <h2>프라이빗 <em>과외 안내</em></h2>
+      <div class="pv-info">
+        <div><b>수업 방식</b><span id="pvWay"></span></div>
+        <div><b>교습비</b><span id="pvFee"></span></div>
+        <div><b>수업 시간</b><span class="pv-opt" id="pvLen"></span></div>
+        <div><b>횟수</b><span class="pv-opt">주 <input id="pvCnt" type="number" min="1" max="7" placeholder="_" inputmode="numeric" aria-label="주 몇 회"> 회</span></div>
+        <div class="wide"><b>약속</b><span id="pvRule"></span></div>
+      </div>
+      <h3>지금 비어 있는 시간</h3>
+      <div class="pv-grid" id="pvGrid"></div>
+      <div class="pv-legend"><span><i style="border-color:#9fd3b0"></i>비어 있음</span><span><i style="border:1px dashed #D8BC78"></i>대기 가능 (수업 중인 시간)</span><span><i style="background:#D8BC78;border-color:#D8BC78"></i>내가 고름</span><span><i></i>닫힘</span></div>
+      <h3>수강 신청</h3>
+      <div class="pv-picks" id="pvPicks"></div>
+      <div class="pv-form">
+        <input id="pvPhone" placeholder="보호자 연락처" inputmode="tel" autocomplete="tel" aria-label="보호자 연락처">
+        <input id="pvSubj" placeholder="희망 과목" aria-label="희망 과목">
+        <textarea id="pvMemo" placeholder="원장님께 남길 말" aria-label="원장님께 남길 말" maxlength="500"></textarea>
+      </div>
+      <label class="pv-agree"><input type="checkbox" id="pvAgree"> 신청 처리를 위해 연락처를 수집하는 데 동의합니다. 상담이 끝나면 지웁니다.</label>
+      <button class="pv-btn fill" id="pvSend" type="button">신청 보내기</button>
+      <div class="pv-msg" id="pvMsg2" role="status"></div>
+    </div>
+    <div id="pvDone" hidden>
+      <div class="pv-done">
+        <div class="pv-tag" style="display:inline-block">Private · By Invitation</div>
+        <h2>신청을 <em>받았습니다</em></h2>
+        <p class="pv-lead" id="pvDoneTxt" style="margin:0 auto 1rem"></p>
+        <p class="pv-note">시간은 원장님이 확인한 뒤에 확정됩니다. 확정되면 연락드립니다.</p>
+        <button class="pv-btn" id="pvBack" type="button" style="margin-top:1.2rem">신청 내용 고치기</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="section-inner">
@@ -2056,6 +2174,64 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
   reveals.forEach(el => io.observe(el));
   const bnX = document.getElementById('bnX');
   if (bnX) bnX.addEventListener('click', () => { document.body.classList.remove('has-bn'); try { localStorage.setItem('jl-bn-2027', 'x'); } catch (e) {} });
+</script>
+<script>
+/* 1:1 프라이빗 과외 : 코드를 서버에 보내고, 맞을 때만 안쪽 내용을 받아 그린다 (2026-11-16) */
+(function(){
+  var API='https://my.jlnahbi.kr/.netlify/functions/tutor', $=function(i){return document.getElementById(i)};
+  if(!$('pv'))return;
+  var S={code:'',d:null,picks:[],waits:[],end:0,tm:null};
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var say=function(k){return k.replace('|','요일 ')};
+  function show(w){$('pvOut').hidden=w!=='out';$('pvIn').hidden=w!=='in';$('pvDone').hidden=w!=='done';}
+  function call(body){return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json().catch(function(){return null})});}
+  function keep(v){try{v?sessionStorage.setItem('jl-pv',v):sessionStorage.removeItem('jl-pv')}catch(e){}}
+  function tick(){var l=Math.max(0,S.end-Date.now()),p=function(n){return String(n).padStart(2,'0')};
+    $('pvLeft').textContent=p(Math.floor(l/3600000))+':'+p(Math.floor(l%3600000/60000))+':'+p(Math.floor(l%60000/1000));
+    if(l<=0){clearInterval(S.tm);keep('');show('out');msg('pvMsg','이 초대는 끝났습니다. 다시 필요하시면 상담 때 안내받은 연락처로 말씀해 주세요.',1);}}
+  function msg(id,t,bad){var m=$(id);m.textContent=t||'';m.className='pv-msg'+(bad?' bad':'');}
+  function grid(){var d=S.d,h='<div></div>'+d.days.map(function(x){return '<div class="h">'+esc(x)+'</div>'}).join('');
+    d.times.forEach(function(t){h+='<div class="t">'+esc(t)+'</div>';d.days.forEach(function(x){var k=x+'|'+t,i=S.picks.indexOf(k),w=S.waits.indexOf(k);
+      h+=i>=0?'<div class="pv-sl open pick" data-k="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">'+(i+1)+'</div>'
+        :d.open.indexOf(k)>=0?'<div class="pv-sl open" data-k="'+esc(k)+'" role="button" tabindex="0" aria-pressed="false">가능</div>'
+        :w>=0?'<div class="pv-sl wait pick" data-w="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">대기 ✓</div>'
+        :d.wait.indexOf(k)>=0?'<div class="pv-sl wait" data-w="'+esc(k)+'" role="button" tabindex="0" aria-pressed="false">대기</div>':'<div class="pv-sl"></div>';});});
+    var g=$('pvGrid');g.style.gridTemplateColumns='3.2rem repeat('+d.days.length+',1fr)';g.innerHTML=h;
+    $('pvPicks').innerHTML=(S.picks.length||S.waits.length)?(S.picks.length?'희망 '+S.picks.length+'칸 : '+S.picks.map(function(k,i){return (i+1)+') '+esc(say(k))}).join('  ·  '):'')+(S.picks.length&&S.waits.length?'<br>':'')+(S.waits.length?'대기 '+S.waits.length+'칸 : '+S.waits.map(function(k){return esc(say(k))}).join('  ·  '):'')
+      :'원하는 시간을 모두 눌러 주세요. 여러 칸을 고를 수 있고, 누른 순서가 희망 순서입니다. 수업 중인 시간은 「대기」로 걸어 둘 수 있습니다.';}
+  function paint(d){S.d=d;S.end=Date.now()+d.left;var f=d.info||{};
+    $('pvWho').textContent=d.who||'';$('pvWay').innerHTML=esc(f.방식)+(f.방식곁?'<br><i>'+esc(f.방식곁)+'</i>':'');$('pvFee').textContent=f.교습비||'';
+    $('pvRule').innerHTML=(f.약속||[]).map(function(x){return '· '+esc(x)}).join('<br>');
+    var r=d.req||{};$('pvLen').innerHTML=(f.길이||[]).map(function(x,i){return '<label><input type="radio" name="pvLen" value="'+esc(x)+'"'+((r.len?r.len===x:i===0)?' checked':'')+'> '+esc(x)+'</label>'}).join('');
+    $('pvCnt').value=r.cnt||'';S.picks=(r.picks||[]).filter(function(k){return d.open.indexOf(k)>=0});S.waits=(r.waits||[]).filter(function(k){return d.wait.indexOf(k)>=0});
+    grid();clearInterval(S.tm);S.tm=setInterval(tick,1000);tick();show('in');
+    if(d.req)msg('pvMsg2','이미 보내신 신청이 있습니다. 고쳐서 다시 보내시면 새 내용으로 바뀝니다.');else msg('pvMsg2','');}
+  function open(code,quiet){var b=$('pvOpen');b.disabled=true;if(!quiet)msg('pvMsg','여는 중입니다…');
+    call({op:'open',code:code}).then(function(j){b.disabled=false;
+      if(j&&j.ok){S.code=code;keep(code);msg('pvMsg','');paint(j);if(!quiet)$('pv').scrollIntoView({behavior:'smooth',block:'start'});}
+      else{keep('');if(!quiet)msg('pvMsg',(j&&j.말)||'지금은 열지 못했어요. 잠시 뒤 다시 해 주세요.',1);}
+    }).catch(function(){b.disabled=false;if(!quiet)msg('pvMsg','지금은 열지 못했어요. 잠시 뒤 다시 해 주세요.',1);});}
+  $('pvCodeForm').addEventListener('submit',function(e){e.preventDefault();var v=$('pvCode').value.trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
+    if(!v){msg('pvMsg','초대 코드를 넣어 주세요.',1);return;}open(v);});
+  function tap(e){var a=e.target.closest('.pv-sl.open'),w=e.target.closest('.pv-sl.wait'),L=a?S.picks:w?S.waits:null;if(!L)return;
+    var k=a?a.dataset.k:w.dataset.w,i=L.indexOf(k);if(i>=0)L.splice(i,1);else L.push(k);grid();}
+  $('pvGrid').addEventListener('click',tap);
+  $('pvGrid').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();tap(e);}});
+  $('pvSend').addEventListener('click',function(){var len=(document.querySelector('input[name=pvLen]:checked')||{}).value,cnt=$('pvCnt').value;
+    if(!S.picks.length&&!S.waits.length)return msg('pvMsg2','원하는 시간을 하나 이상 눌러 주세요.',1);
+    if(!cnt){$('pvCnt').focus();return msg('pvMsg2','주 몇 회인지 적어 주세요.',1);}
+    if($('pvPhone').value.replace(/\D/g,'').length<9){$('pvPhone').focus();return msg('pvMsg2','보호자 연락처를 적어 주세요.',1);}
+    if(!$('pvAgree').checked)return msg('pvMsg2','수집 동의에 체크해 주세요.',1);
+    var b=$('pvSend');b.disabled=true;msg('pvMsg2','보내는 중입니다…');
+    call({op:'apply',code:S.code,len:len,cnt:Number(cnt),picks:S.picks,waits:S.waits,phone:$('pvPhone').value,subject:$('pvSubj').value,memo:$('pvMemo').value,agree:true}).then(function(j){b.disabled=false;
+      if(j&&j.ok){$('pvDoneTxt').innerHTML=esc(j.len)+' · 주 '+esc(j.cnt)+'회'+(j.picks.length?'<br>희망 : '+j.picks.map(function(k){return esc(say(k))}).join(' · '):'')+(j.waits.length?'<br>대기 : '+j.waits.map(function(k){return esc(say(k))}).join(' · '):'');
+        S.d.req={len:j.len,cnt:j.cnt,picks:j.picks,waits:j.waits};show('done');$('pv').scrollIntoView({behavior:'smooth',block:'start'});}
+      else msg('pvMsg2',(j&&j.말)||'보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);
+    }).catch(function(){b.disabled=false;msg('pvMsg2','보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);});});
+  $('pvBack').addEventListener('click',function(){show('in');msg('pvMsg2','고쳐서 다시 보내시면 새 내용으로 바뀝니다.');});
+  var old='';try{old=sessionStorage.getItem('jl-pv')||''}catch(e){}
+  if(/^[A-Z2-9]{6}$/.test(old))open(old,true);
+})();
 </script>
 </body>
 </html>
