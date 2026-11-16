@@ -1396,6 +1396,14 @@ body.has-bn nav { top: var(--bn-h); }
   .at-foot { font-size: 1.15rem; }
 }
 a.logo-wrap{text-decoration:none;cursor:pointer}
+/* 2026-11-16 원장님 손질 : 다섯 단계의 왼쪽(그림) 칸이 오른쪽보다 짧아 아래가 비던 것 → 그림을 조금 내리고, Seed → … → Fly 를 크게 해서 맨 아래에 */
+@media (min-width:901px){
+  .papilio-left{display:flex;flex-direction:column;align-self:stretch}
+  .papilio-left::before{content:"";flex:.45 0 0;max-height:72px}
+  .papilio-caption{flex:.55 0 auto;flex-direction:column;align-items:flex-start;flex-wrap:nowrap;justify-content:flex-start}
+  .papilio-caption p{margin-left:6px}
+  .papilio-caption span{margin-top:auto;font-size:1.34rem;line-height:1.2;white-space:nowrap}
+}
 </style>
 </head>
 <body class="has-bn">
