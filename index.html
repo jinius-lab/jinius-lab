@@ -1434,6 +1434,8 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
 .pv-btn:hover,.pv-btn.fill{background:var(--pg);color:#14211a}
 .pv-btn.fill:hover{background:#e6cf96}
 .pv-btn[disabled]{opacity:.5;cursor:default}
+.pv-ask{margin-top:1.1rem;border-top:1px solid #6d5b33;padding-top:1.2rem}
+.pv-ask h3{margin-top:0}
 .pv-code{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:1.1rem}
 .pv-code input{font:700 1.15rem/1 ui-monospace,'DM Mono',monospace;letter-spacing:.3em;text-transform:uppercase;padding:.75rem .8rem;width:13rem;max-width:100%;border:1px solid #6d5b33;background:rgba(0,0,0,.25);color:#F6EFDC}
 .pv-code input::placeholder{letter-spacing:.2em;font-weight:400;color:#6f7a70;font-family:'Noto Serif KR',serif;font-size:.9rem}
@@ -2261,7 +2263,21 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
       <p class="pv-lead">레벨테스트는 필수입니다.<br>답만이 아니라 풀이 과정까지 함께 봅니다.</p>
       <p class="pv-lead">이후 심층 면접을 거쳐 받으신 코드로 입장하셔서,<br>수업 가능 스케줄과 수업 내용을 확인하시고 결정하시면 됩니다.</p>
       <div class="pv-path"><div><b>01</b>레벨테스트</div><div><b>02</b>심층 면접</div><div><b>03</b>초대 코드로 입장</div><div><b>04</b>스케줄 확인과 결정</div></div>
-      <a class="pv-btn fill" href="#contact">레벨테스트 문의</a>
+      <button class="pv-btn fill" id="pvAskOpen" type="button">레벨테스트 문의하기</button>
+      <form class="pv-ask" id="pvAskForm" hidden autocomplete="off">
+        <h3>레벨테스트 문의</h3>
+        <div class="pv-form">
+          <input id="pvAskName" placeholder="학생 이름" aria-label="학생 이름" maxlength="20">
+          <input id="pvAskGrade" placeholder="학년 (예: 중2 · 고1)" aria-label="학년" maxlength="10">
+          <input id="pvAskPhone" placeholder="연락받으실 번호" inputmode="tel" autocomplete="tel" aria-label="연락받으실 번호" maxlength="20">
+          <input id="pvAskSubj" placeholder="희망 과목" aria-label="희망 과목" maxlength="40">
+          <textarea id="pvAskMemo" placeholder="원장님께 남길 말 (선택)" aria-label="원장님께 남길 말" maxlength="500"></textarea>
+        </div>
+        <label class="pv-agree"><input type="checkbox" id="pvAskAgree"> 연락을 위해 이름과 번호를 수집하는 데 동의합니다. 상담이 끝나면 지웁니다.</label>
+        <button class="pv-btn fill" id="pvAskSend" type="submit">문의 보내기</button>
+        <div class="pv-msg" id="pvAskMsg" role="status"></div>
+        <p class="pv-note">보내 주시면 원장님이 확인한 뒤 연락드립니다. 레벨테스트와 심층 면접을 마치면 초대 코드를 드립니다.</p>
+      </form>
       <form class="pv-code" id="pvCodeForm" autocomplete="off">
         <input id="pvCode" maxlength="8" placeholder="초대 코드" aria-label="초대 코드" autocapitalize="characters" spellcheck="false">
         <button class="pv-btn" id="pvOpen" type="submit">열기</button>
@@ -2447,6 +2463,26 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
       else msg('pvMsg2',(j&&j.말)||'보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);
     }).catch(function(){b.disabled=false;msg('pvMsg2','보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);});});
   $('pvBack').addEventListener('click',function(){show('in');msg('pvMsg2','고쳐서 다시 보내시면 새 내용으로 바뀝니다.');});
+  /* 📬 레벨테스트 문의 (2026-11-17 원장님 「이름하고 그런거 입력하는거 있어야 내가 레벨테스트를 열어주고 … 코드가 발부되고」) */
+  var 열렸나=false;
+  $('pvAskOpen').addEventListener('click',function(){
+    열렸나=!열렸나; $('pvAskForm').hidden=!열렸나; this.textContent=열렸나?'문의 칸 닫기':'레벨테스트 문의하기';
+    if(열렸나){$('pvAskForm').scrollIntoView({behavior:'smooth',block:'nearest'});$('pvAskName').focus();}
+  });
+  $('pvAskForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var b=$('pvAskSend');
+    if(!$('pvAskAgree').checked){msg('pvAskMsg','수집 동의에 체크해 주세요.',1);return;}
+    b.disabled=true; msg('pvAskMsg','보내는 중…');
+    call({op:'ask',name:$('pvAskName').value,grade:$('pvAskGrade').value,phone:$('pvAskPhone').value,
+          subject:$('pvAskSubj').value,memo:$('pvAskMemo').value,agree:true}).then(function(j){
+      b.disabled=false;
+      if(j&&j.ok){
+        $('pvAskForm').innerHTML='<h3>문의를 받았습니다</h3><p class="pv-lead" style="margin:0">원장님이 확인한 뒤에 연락드립니다.<br>레벨테스트와 심층 면접을 마치면 초대 코드를 드립니다.</p>';
+        $('pvAskOpen').hidden=true;
+      } else msg('pvAskMsg',(j&&j.말)||'보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);
+    }).catch(function(){b.disabled=false;msg('pvAskMsg','보내지 못했어요. 잠시 뒤 다시 해 주세요.',1);});
+  });
   var old='';try{old=sessionStorage.getItem('jl-pv')||''}catch(e){}
   if(/^[A-Z2-9]{6}$/.test(old))open(old,true);
 })();
