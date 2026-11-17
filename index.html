@@ -1413,12 +1413,18 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
 .pv{--pg:#D8BC78;--pi:#F1EAD6;--pd:#a9b3a6;--pl:#3a4a3f;max-width:980px;margin:0 auto;position:relative;overflow:hidden;color:var(--pi);word-break:keep-all;
   background:radial-gradient(120% 90% at 85% -10%,#24382c 0%,#14211a 55%,#0e1813 100%);border:1px solid #6d5b33;padding:3.4rem 3.2rem;
   box-shadow:0 30px 80px rgba(10,20,14,.32),inset 0 0 0 6px #14211a,inset 0 0 0 7px rgba(216,188,120,.35)}
-.pv-seal{position:absolute;right:2.2rem;top:2.1rem;width:70px;height:70px;border:1px solid var(--pg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--pg)}
-.pv-seal::before{content:"";position:absolute;inset:4px;border:1px dashed rgba(216,188,120,.5);border-radius:50%}
+/* 🚪 2026-11-17 원장님이 주신 JL·NAHBI / PRIVATE 심볼 킷 : 「초대받아 들어서는 문」 을 도장 자리에 (옛 원 안 JL 대신) */
+.pv-seal{position:absolute;right:2.1rem;top:1.9rem;width:88px;height:88px;display:block;opacity:.95;pointer-events:none}
 .pv-tag{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.34em;text-transform:uppercase;color:var(--pg)}
 .pv-tag::after{content:"";display:block;width:46px;height:1px;background:var(--pg);margin-top:.85rem}
 .pv h2{font-family:'Cormorant Garamond','Noto Serif KR',serif;font-weight:600;font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.25;margin:.8rem 0 1.3rem;color:#F6EFDC}
 .pv h2 em{font-style:italic;color:var(--pg)}
+.pv-sig{font-family:'Cormorant Garamond','Noto Serif KR',serif;font-style:italic;font-size:1.05rem;letter-spacing:.06em;color:var(--pg);margin:-.7rem 0 1.5rem}
+.pv-sig::before{content:"";display:inline-block;width:22px;height:1px;background:var(--pg);vertical-align:.3em;margin-right:.55rem}
+.pv-lock{display:block;width:min(360px,72%);height:auto;margin:0 0 1.7rem}
+.pv-inside .pv-seal{display:none}
+.pv-inside #pvIn .pv-tag,.pv-inside #pvIn .pv-sig,.pv-inside #pvIn h2{display:none}
+@media (max-width:900px){.pv-lock{width:min(300px,100%);margin-bottom:1.3rem}}
 .pv-lead{font-family:'Noto Serif KR',serif;font-size:1rem;line-height:1.95;margin:0 0 1.15rem;max-width:560px;color:var(--pi)}
 .pv-lead small{font-size:.8rem;color:var(--pd)}
 .pv-path{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin:1.8rem 0 1.6rem}
@@ -1463,7 +1469,7 @@ a.logo-wrap{text-decoration:none;cursor:pointer}
 .pv-agree{font-size:.8rem;color:var(--pd);display:flex;gap:.45rem;align-items:flex-start;margin:.8rem 0}
 .pv-done{text-align:center;padding:1.6rem .4rem}
 .pv [hidden]{display:none!important}
-@media (max-width:900px){#private{padding:3.6rem 1.2rem}.pv{padding:2.4rem 1.4rem}.pv-seal{width:50px;height:50px;font-size:1.1rem;right:1.1rem;top:1.1rem}.pv-path{grid-template-columns:1fr 1fr}.pv-info,.pv-form{grid-template-columns:1fr}.pv-grid{font-size:.7rem;gap:3px}.pv-sl{font-size:.66rem;min-height:2.1rem}.pv-grid .t{padding-right:.2rem}}
+@media (max-width:900px){#private{padding:3.6rem 1.2rem}.pv{padding:2.4rem 1.4rem}.pv-seal{width:58px;height:58px;right:1rem;top:1rem}.pv-path{grid-template-columns:1fr 1fr}.pv-info,.pv-form{grid-template-columns:1fr}.pv-grid{font-size:.7rem;gap:3px}.pv-sl{font-size:.66rem;min-height:2.1rem}.pv-grid .t{padding-right:.2rem}}
 
 /* ── 쉬운 홈페이지 시안 ── */
 .glance{background:var(--white);border-bottom:1px solid var(--rule);padding:2.6rem 3.5rem}
@@ -2245,10 +2251,11 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
 <!-- 1:1 프라이빗 과외 : 초대 코드로 여는 칸 (2026-11-16) -->
 <section id="private">
   <div class="pv reveal" id="pv">
-    <div class="pv-seal" aria-hidden="true">JL</div>
+    <img class="pv-seal" src="/private-door.png" alt="" aria-hidden="true" width="88" height="88">
     <div id="pvOut">
       <div class="pv-tag">Private · By Invitation</div>
       <h2>1:1 <em>프라이빗</em> 과외</h2>
+      <p class="pv-sig">한 사람을 위한 수업</p>
       <p class="pv-lead">1:1로 배우고 싶은 분들을 위한 자리입니다.</p>
       <p class="pv-lead">선생님이 찾아가는 방문 수업과,<br>과외 공간으로 오시는 수업 가운데 고르실 수 있습니다.<br><small>(교습비는 수업 방식에 따라 다릅니다)</small></p>
       <p class="pv-lead">레벨테스트는 필수입니다.<br>답만이 아니라 풀이 과정까지 함께 봅니다.</p>
@@ -2263,9 +2270,11 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
       <p class="pv-note">초대 코드는 레벨테스트와 심층 면접을 마친 분께 드립니다. 처음 연 때부터 하루 동안 열립니다.</p>
     </div>
     <div id="pvIn" hidden>
+      <img class="pv-lock" src="/private-lockup.png" alt="JL·NAHBI PRIVATE : 한 사람을 위한 수업" width="931" height="312">
       <div class="pv-bar"><span>🔑 <span id="pvWho"></span> 학생에게 드린 초대입니다</span><span>남은 시간 <b id="pvLeft"></b></span></div>
       <div class="pv-tag">Private · By Invitation</div>
       <h2>프라이빗 <em>과외 안내</em></h2>
+      <p class="pv-sig">한 사람을 위한 수업</p>
       <div class="pv-info">
         <div><b>수업 방식</b><span id="pvWay"></span></div>
         <div><b>교습비</b><span id="pvFee"></span></div>
@@ -2392,7 +2401,7 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
   var S={code:'',d:null,picks:[],waits:[],end:0,tm:null};
   var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
   var say=function(k){return k.replace('|','요일 ')};
-  function show(w){$('pvOut').hidden=w!=='out';$('pvIn').hidden=w!=='in';$('pvDone').hidden=w!=='done';}
+  function show(w){$('pvOut').hidden=w!=='out';$('pvIn').hidden=w!=='in';$('pvDone').hidden=w!=='done';try{$('pv').classList.toggle('pv-inside',w==='in')}catch(e){}}
   function call(body){return fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json().catch(function(){return null})});}
   function keep(v){try{v?sessionStorage.setItem('jl-pv',v):sessionStorage.removeItem('jl-pv')}catch(e){}}
   function tick(){var l=Math.max(0,S.end-Date.now()),p=function(n){return String(n).padStart(2,'0')};
