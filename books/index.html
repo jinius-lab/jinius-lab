@@ -67,11 +67,11 @@ a { color: inherit; text-decoration: none; }
 .book .m { font-family: 'DM Mono', monospace; font-size: 0.66rem; letter-spacing: 0.12em; color: rgba(244,236,216,0.62); }
 .book::after { content: ""; position: absolute; left: 1rem; right: 1rem; top: 2.6rem; height: 1px; background: rgba(232,201,126,0.35); }
 
-.stages { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-top: 2.6rem; border: 1px solid var(--rule); background: #fff; }
-.stage { padding: 1.3rem 1.1rem 1.4rem; border-right: 1px solid var(--rule); }
+.stages { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; margin-top: 2.6rem; border: 1px solid var(--rule); background: #fff; }
+.stage { padding: 1.3rem .5rem 1.4rem; text-align: center; border-right: 1px solid var(--rule); }
 .stage:last-child { border-right: none; }
 .stage i { font-family: 'DM Mono', monospace; font-style: normal; font-size: 0.7rem; letter-spacing: 0.14em; color: var(--gold); }
-.stage b { display: block; font-family: 'Cinzel', serif; font-size: 1.05rem; letter-spacing: 0.14em; color: var(--navy); margin-top: 0.3rem; }
+.stage b { display: block; font-family: 'Cinzel', serif; font-size: .98rem; letter-spacing: 0.06em; color: var(--navy); margin-top: 0.3rem; }
 .stage em { display: block; font-style: normal; font-size: 0.86rem; font-weight: 600; color: var(--ink2); margin-top: 0.15rem; }
 .stage p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; margin-top: 0.6rem; word-break: keep-all; }
 
@@ -169,6 +169,8 @@ footer a:hover { color: var(--navy); }
   .s-head p { text-align: left; max-width: 100%; }
   .books { grid-template-columns: repeat(auto-fill, minmax(128px, 1fr)); gap: 0.8rem; }
   .stages { grid-template-columns: 1fr; }
+  .stage { text-align: left; padding: 1rem 1.1rem; }
+  .stage b, .stage em { display: inline-block; margin-right: .6rem; }
   .stage { border-right: none; border-bottom: 1px solid var(--rule); }
   .stage:last-child { border-bottom: none; }
   .hero-grid { flex-direction: column; align-items: flex-start; gap: 2rem; }
@@ -316,10 +318,10 @@ footer a:hover { color: var(--navy); }
   <div class="inner">
     <div class="s-head">
       <div>
-        <div class="badge">문제집 · 7과목 × P1—P5</div>
-        <h2>PAPILIO<span>개념 다음에 푸는 문제집 : 다섯 단계로 올라갑니다</span></h2>
+        <div class="badge">문제집 · 7과목 × 1권 ~ 7권</div>
+        <h2>PAPILIO<span>개념 다음에 푸는 문제집 : 일곱 단계로 올라갑니다</span></h2>
       </div>
-      <p>PAPILIO는 문제집입니다. 개념은 원점에서 세우고, 문제는 PAPILIO에서 풉니다. 과목마다 같은 다섯 단계를 밟습니다.</p>
+      <p>PAPILIO는 문제집입니다. 개념은 원점에서 세우고, 문제는 PAPILIO에서 풉니다. 과목마다 같은 일곱 단계를 밟습니다.</p>
     </div>
 
     <div class="row3">
@@ -335,11 +337,13 @@ footer a:hover { color: var(--navy); }
     </div>
 
     <div class="stages">
-      <div class="stage"><i>P1</i><b>SEED</b><em>주어진 것</em><p>개념·정의·공리 : 모든 풀이가 시작되는 지점을 단단히 놓는다.</p></div>
-      <div class="stage"><i>P2</i><b>GROW</b><em>축적</em><p>유형 훈련의 계절 : 폭식하듯 흡수하며 풀이의 재료를 쌓는다.</p></div>
-      <div class="stage"><i>P3</i><b>BUILD</b><em>재구조화</em><p>흩어진 유형이 하나의 구조로 재조립되는, 커리큘럼의 심장부.</p></div>
-      <div class="stage"><i>P4</i><b>WING</b><em>참형상</em><p>구조가 보이는 사람 : 문제를 푸는 자가 아니라 꿰뚫는 자.</p></div>
-      <div class="stage"><i>P5</i><b>FLY</b><em>전이</em><p>배운 적 없는 문제 위로 날아오른다 : 그것이 배움의 완성이다.</p></div>
+      <div class="stage"><i>1권</i><b>SEED</b><em>시작</em></div>
+      <div class="stage"><i>2권</i><b>GROW</b><em>성장</em></div>
+      <div class="stage"><i>3권</i><b>BUILD</b><em>구조화</em></div>
+      <div class="stage"><i>4권</i><b>WING</b><em>독립 준비</em></div>
+      <div class="stage"><i>5권</i><b>FLY</b><em>독립 적용</em></div>
+      <div class="stage"><i>6권</i><b>SOAR</b><em>확장</em></div>
+      <div class="stage"><i>7권</i><b>SOW</b><em>생성 · 나눔</em></div>
     </div>
   </div>
 </section>
