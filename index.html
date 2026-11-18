@@ -2424,7 +2424,10 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
     if(l<=0){clearInterval(S.tm);keep('');show('out');msg('pvMsg','이 초대는 끝났습니다. 다시 필요하시면 상담 때 안내받은 연락처로 말씀해 주세요.',1);}}
   function msg(id,t,bad){var m=$(id);m.textContent=t||'';m.className='pv-msg'+(bad?' bad':'');}
   function grid(){var d=S.d,h='<div></div>'+d.days.map(function(x){return '<div class="h">'+esc(x)+'</div>'}).join('');
-    d.times.forEach(function(t){h+='<div class="t">'+esc(t)+'</div>';d.days.forEach(function(x){var k=x+'|'+t,i=S.picks.indexOf(k),w=S.waits.indexOf(k);
+    /* 칸이 10:00~20:30 으로 늘어서(2026-11-18), 모든 요일이 닫힌 시각 줄은 아예 안 보입니다 */
+    var 쓰는줄=d.times.filter(function(t){return d.days.some(function(x){var k=x+'|'+t;return d.open.indexOf(k)>=0||d.wait.indexOf(k)>=0});});
+    if(!쓰는줄.length)쓰는줄=d.times.slice();
+    쓰는줄.forEach(function(t){h+='<div class="t">'+esc(t)+'</div>';d.days.forEach(function(x){var k=x+'|'+t,i=S.picks.indexOf(k),w=S.waits.indexOf(k);
       h+=i>=0?'<div class="pv-sl open pick" data-k="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">'+(i+1)+'</div>'
         :d.open.indexOf(k)>=0?'<div class="pv-sl open" data-k="'+esc(k)+'" role="button" tabindex="0" aria-pressed="false">가능</div>'
         :w>=0?'<div class="pv-sl wait pick" data-w="'+esc(k)+'" role="button" tabindex="0" aria-pressed="true">대기 ✓</div>'
