@@ -236,7 +236,13 @@ nav {
    선은 그림 파일에 녹회색 한 빛으로 담겨 있고 옅기는 여기서 정한다 */
 .hero-road { display: block; height: clamp(190px, 34vh, 420px); width: auto; max-width: 112%; margin: 2rem 0 1.6rem -6%; opacity: 0.26; pointer-events: none; user-select: none; }   /* 높이를 화면 높이에 맞춰 : 낮은 화면에서도 위가 안 잘리게 */
 @media (max-width: 900px) { .hero-road { height: auto; width: 100%; max-width: 440px; margin: 1rem auto 1.2rem; } }
-@media (max-width: 560px) { .hero-road { display: none; } }
+@media (max-width: 560px) {
+  .hero-road { display: none; }
+  /* 📱 2026-11-21 원장님 「폰에선 작은 글자를 오른쪽으로 옮기는게 어때?」 : 제목은 왼쪽 · 작은 글은 오른쪽 (금줄도 오른쪽으로) */
+  .hero-right { text-align: right; }
+  .hero .hero-desc { border-left: 0; padding-left: 0; border-right: 2px solid var(--gold2); padding-right: 1.1rem; margin-left: auto; }
+  .hero .hero-actions, .hero .sns-links { justify-content: flex-end; }
+}
 
 .hero-eyebrow {
   font-family: 'DM Mono', monospace;
