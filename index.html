@@ -238,6 +238,10 @@ nav {
 @media (max-width: 900px) { .hero-road { height: auto; width: 100%; max-width: 440px; margin: 1rem auto 1.2rem; } }
 @media (max-width: 560px) {
   .hero-road { display: none; }
+  /* 📱 2026-11-21 원장님 「근데 폰 화면에서 워터마크는?」 : 폰에서는 그림을 바탕 무늬로 (옅게 구운 hero-road-faint.png · 첫 화면 위쪽 빈 곳 오른쪽) */
+  /* 그림 비율은 폰에 맞게 잘라 씀(hero-road-phone.png : 아래 길 꼬리 · 왼쪽 언덕 끝을 덜어 냄) · 제목 위에 그림 자리를 비워 겹치지 않게 */
+  .hero { background: var(--paper) url(hero-road-phone.png) no-repeat right 1.2rem top 3.4rem / 78% auto; }
+  .hero .hero-left { padding-top: calc(58vw + 3.4rem); }
   /* 📱 2026-11-21 원장님 「폰에선 작은 글자를 오른쪽으로 옮기는게 어때?」 : 제목은 왼쪽 · 작은 글은 오른쪽 (금줄도 오른쪽으로) */
   .hero-right { text-align: right; }
   .hero .hero-desc { border-left: 0; padding-left: 0; border-right: 2px solid var(--gold2); padding-right: 1.1rem; margin-left: auto; }
