@@ -235,15 +235,15 @@ nav {
 }
 
 .hero-left { padding-top: 4rem; }
-/* 🛤 길 · 집 · 열쇠 그림 (2026-11-21) : 오른쪽 문구 «위» 에 자리를 차지하게 둔다 — 겹치지 않게
+/* 🛤 길 · 집 · 열쇠 그림 (2026-11-21 · 2026-11-24 원장님 그림을 베이지 빛으로 바꿈 : hero-path-beige.png · 옛 선그림 hero-road.png 는 남겨 둠) : 오른쪽 문구 «위» 에 자리를 차지하게 둔다 — 겹치지 않게
    선은 그림 파일에 녹회색 한 빛으로 담겨 있고 옅기는 여기서 정한다 */
-.hero-road { display: block; height: clamp(190px, 34vh, 420px); width: auto; max-width: 112%; margin: 2rem 0 1.6rem -6%; opacity: 0.26; pointer-events: none; user-select: none; }   /* 높이를 화면 높이에 맞춰 : 낮은 화면에서도 위가 안 잘리게 */
+.hero-road { display: block; height: clamp(190px, 34vh, 420px); width: auto; max-width: 112%; margin: 2rem 0 1.6rem -6%; opacity: 0.55; pointer-events: none; user-select: none; }   /* 높이를 화면 높이에 맞춰 : 낮은 화면에서도 위가 안 잘리게 */
 @media (max-width: 900px) { .hero-road { height: auto; width: 100%; max-width: 440px; margin: 1rem auto 1.2rem; } }
 @media (max-width: 560px) {
   .hero-road { display: none; }
   /* 📱 2026-11-21 원장님 「근데 폰 화면에서 워터마크는?」 : 폰에서는 그림을 바탕 무늬로 (옅게 구운 hero-road-faint.png · 첫 화면 위쪽 빈 곳 오른쪽) */
   /* 그림 비율은 폰에 맞게 잘라 씀(hero-road-phone.png : 아래 길 꼬리 · 왼쪽 언덕 끝을 덜어 냄) · 제목 위에 그림 자리를 비워 겹치지 않게 */
-  .hero { background: var(--paper) url(hero-road-phone.png) no-repeat right 1.2rem top 3.4rem / 78% auto; }
+  .hero { background: var(--paper) url(hero-path-beige-phone.png) no-repeat right 1.2rem top 3.4rem / 78% auto; }
   .hero .hero-left { padding-top: calc(58vw + 3.4rem); }
   /* 📱 2026-11-21 원장님 「폰에선 작은 글자를 오른쪽으로 옮기는게 어때?」 : 제목은 왼쪽 · 작은 글은 오른쪽 (금줄도 오른쪽으로) */
   .hero-right { text-align: right; }
@@ -1600,7 +1600,7 @@ window.addEventListener('DOMContentLoaded',up);window.addEventListener('load',fu
       </h1>
     </div>
     <div class="hero-right">
-      <img class="hero-road" src="hero-road.png" alt="" aria-hidden="true" width="858" height="644">
+      <img class="hero-road" src="hero-path-beige.png" alt="" aria-hidden="true" width="1086" height="815">
       <p class="hero-desc">
         <strong><span class="hd-l">과외를 넘어선 정밀함,</span> <span class="hd-l">학원을 넘어선 시스템.</span></strong><br>
         과외의 <b>장점</b>과 학원의 <b>장점</b>을 모았습니다.<br>
